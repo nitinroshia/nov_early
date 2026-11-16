@@ -1,0 +1,1584 @@
+{
+  "vendor": "RELI-style field codes emitted by generate_sample_data.py",
+  "mapping_version": "0.1.0",
+  "canonical_schema_version": "0.1.0",
+  "how_to_read": "fields: vendor code -> canonical field (context-free). paths: dotted-path overrides. transform ops: expr (row-level arithmetic on vendor codes), date_from_iso_datetime, enum_map, regex, parse_month_name. synthetic: canonical fields built from several codes.",
+  "fields": {
+    "sid": {
+      "canonical": "company_id",
+      "entity": "keys"
+    },
+    "fiscalYear": {
+      "canonical": "fiscal_year",
+      "entity": "keys"
+    },
+    "fy": {
+      "canonical": "fiscal_year",
+      "entity": "keys"
+    },
+    "quarter": {
+      "canonical": "fiscal_quarter",
+      "entity": "keys"
+    },
+    "q": {
+      "canonical": "fiscal_quarter",
+      "entity": "keys"
+    },
+    "endDate": {
+      "canonical": "period_end_date",
+      "transform": {
+        "op": "date_from_iso_datetime"
+      },
+      "note": "Vendor emits 'T00:00:00.000Z' for date-only values.",
+      "entity": "keys"
+    },
+    "displayPeriod": {
+      "canonical": "period_label",
+      "entity": "keys"
+    },
+    "reporting": {
+      "canonical": "reporting_basis",
+      "entity": "keys"
+    },
+    "reportDate": {
+      "canonical": "published_date",
+      "entity": "keys"
+    },
+    "date": {
+      "canonical": "as_of_date",
+      "entity": "keys"
+    },
+    "d": {
+      "canonical": "trade_date",
+      "entity": "keys"
+    },
+    "dates": {
+      "canonical": "month_end_date",
+      "entity": "keys"
+    },
+    "name": {
+      "canonical": "display_name",
+      "entity": "company"
+    },
+    "description": {
+      "canonical": "description",
+      "entity": "company"
+    },
+    "faceValue": {
+      "canonical": "face_value",
+      "entity": "company"
+    },
+    "exchange": {
+      "canonical": "exchange",
+      "entity": "instrument"
+    },
+    "ticker": {
+      "canonical": "symbol",
+      "entity": "instrument"
+    },
+    "isin": {
+      "canonical": "isin",
+      "entity": "instrument"
+    },
+    "type": {
+      "canonical": "instrument_type",
+      "transform": {
+        "op": "enum_map",
+        "map": {
+          "stock": "equity"
+        }
+      },
+      "entity": "instrument"
+    },
+    "tradable": {
+      "canonical": "is_tradable",
+      "entity": "instrument"
+    },
+    "incTrev": {
+      "canonical": "revenue_total",
+      "entity": "income_statement"
+    },
+    "qIncTrevK": {
+      "canonical": "revenue_total",
+      "entity": "income_statement"
+    },
+    "revenue": {
+      "canonical": "revenue_total",
+      "entity": "income_statement"
+    },
+    "incRaw": {
+      "canonical": "cost_of_materials",
+      "entity": "income_statement"
+    },
+    "incPfc": {
+      "canonical": "power_and_fuel_cost",
+      "entity": "income_statement"
+    },
+    "incEpc": {
+      "canonical": "employee_benefit_expense",
+      "entity": "income_statement"
+    },
+    "incSga": {
+      "canonical": "selling_general_admin_expense",
+      "entity": "income_statement"
+    },
+    "incOpe": {
+      "canonical": "other_operating_expense",
+      "entity": "income_statement"
+    },
+    "balCogs": {
+      "canonical": "cost_of_goods_sold",
+      "entity": "income_statement"
+    },
+    "qIncOpeK": {
+      "canonical": "total_operating_expense",
+      "entity": "income_statement"
+    },
+    "incDep": {
+      "canonical": "depreciation_amortization",
+      "entity": "income_statement"
+    },
+    "incIoi": {
+      "canonical": "net_non_operating_expense",
+      "entity": "income_statement"
+    },
+    "incToi": {
+      "canonical": "income_tax_expense",
+      "entity": "income_statement"
+    },
+    "incGpro": {
+      "canonical": "gross_profit",
+      "entity": "income_statement"
+    },
+    "incEbi": {
+      "canonical": "ebitda",
+      "entity": "income_statement"
+    },
+    "qIncEbiK": {
+      "canonical": "ebitda",
+      "entity": "income_statement"
+    },
+    "incPbi": {
+      "canonical": "ebit",
+      "entity": "income_statement"
+    },
+    "qIncPbiK": {
+      "canonical": "ebit",
+      "entity": "income_statement"
+    },
+    "incPbt": {
+      "canonical": "profit_before_tax",
+      "entity": "income_statement"
+    },
+    "qIncPbtK": {
+      "canonical": "profit_before_tax",
+      "entity": "income_statement"
+    },
+    "incNinc": {
+      "canonical": "net_income",
+      "entity": "income_statement"
+    },
+    "qIncNincK": {
+      "canonical": "net_income",
+      "entity": "income_statement"
+    },
+    "netIncome": {
+      "canonical": "net_income",
+      "entity": "income_statement"
+    },
+    "incEps": {
+      "canonical": "eps_basic",
+      "entity": "income_statement"
+    },
+    "qIncEpsK": {
+      "canonical": "eps_basic",
+      "entity": "income_statement"
+    },
+    "incDps": {
+      "canonical": "dividend_per_share",
+      "entity": "income_statement"
+    },
+    "incPyr": {
+      "canonical": "dividend_payout_ratio",
+      "transform": {
+        "op": "expr",
+        "expr": "incPyr * 100"
+      },
+      "note": "Vendor emits a fraction (0.24); canonical is percent points.",
+      "entity": "income_statement"
+    },
+    "balCsti": {
+      "canonical": "cash_and_equivalents",
+      "entity": "balance_sheet"
+    },
+    "balTrec": {
+      "canonical": "trade_receivables",
+      "entity": "balance_sheet"
+    },
+    "balTinv": {
+      "canonical": "inventories",
+      "entity": "balance_sheet"
+    },
+    "balOca": {
+      "canonical": "other_current_assets",
+      "entity": "balance_sheet"
+    },
+    "balTca": {
+      "canonical": "total_current_assets",
+      "entity": "balance_sheet"
+    },
+    "balCa": {
+      "canonical": "total_current_assets",
+      "entity": "balance_sheet"
+    },
+    "balNppe": {
+      "canonical": "net_ppe",
+      "entity": "balance_sheet"
+    },
+    "balGint": {
+      "canonical": "goodwill_and_intangibles",
+      "entity": "balance_sheet"
+    },
+    "balLti": {
+      "canonical": "long_term_investments",
+      "entity": "balance_sheet"
+    },
+    "balDta": {
+      "canonical": "deferred_tax_assets",
+      "entity": "balance_sheet"
+    },
+    "balOtha": {
+      "canonical": "other_non_current_assets",
+      "entity": "balance_sheet"
+    },
+    "balNca": {
+      "canonical": "total_non_current_assets",
+      "transform": {
+        "op": "expr",
+        "expr": "balNca + balOtha"
+      },
+      "note": "Vendor balNca EXCLUDES balOtha, so total assets != balTca + balNca.",
+      "entity": "balance_sheet"
+    },
+    "balTota": {
+      "canonical": "total_assets",
+      "entity": "balance_sheet"
+    },
+    "balAccp": {
+      "canonical": "trade_payables",
+      "entity": "balance_sheet"
+    },
+    "balTcl": {
+      "canonical": "total_current_liabilities",
+      "entity": "balance_sheet"
+    },
+    "balTltd": {
+      "canonical": "long_term_debt",
+      "entity": "balance_sheet"
+    },
+    "balDit": {
+      "canonical": "deferred_tax_liabilities",
+      "entity": "balance_sheet"
+    },
+    "balOthl": {
+      "canonical": "other_non_current_liabilities",
+      "entity": "balance_sheet"
+    },
+    "balNcl": {
+      "canonical": "total_non_current_liabilities",
+      "entity": "balance_sheet"
+    },
+    "balTotl": {
+      "canonical": "total_liabilities",
+      "entity": "balance_sheet"
+    },
+    "balTdeb": {
+      "canonical": "total_debt",
+      "entity": "balance_sheet"
+    },
+    "balComs": {
+      "canonical": "share_capital",
+      "entity": "balance_sheet"
+    },
+    "balApic": {
+      "canonical": "additional_paid_in_capital",
+      "entity": "balance_sheet"
+    },
+    "balRtne": {
+      "canonical": "retained_earnings_and_reserves",
+      "entity": "balance_sheet"
+    },
+    "balOeq": {
+      "canonical": "other_equity",
+      "entity": "balance_sheet"
+    },
+    "balMint": {
+      "canonical": "minority_interest",
+      "entity": "balance_sheet"
+    },
+    "balTeq": {
+      "canonical": "total_equity",
+      "entity": "balance_sheet"
+    },
+    "balTlse": {
+      "canonical": "total_liabilities_and_equity",
+      "entity": "balance_sheet"
+    },
+    "balTcso": {
+      "canonical": "shares_outstanding",
+      "entity": "balance_sheet"
+    },
+    "balTpso": {
+      "canonical": "preferred_shares_outstanding",
+      "confidence": "medium",
+      "entity": "balance_sheet"
+    },
+    "bookValue": {
+      "canonical": "book_value_per_share",
+      "entity": "balance_sheet"
+    },
+    "bps": {
+      "canonical": "book_value_per_share",
+      "entity": "balance_sheet"
+    },
+    "balNetl": {
+      "canonical": "net_advances",
+      "confidence": "medium",
+      "entity": "bank_extension"
+    },
+    "balTdep": {
+      "canonical": "total_deposits",
+      "confidence": "medium",
+      "entity": "bank_extension"
+    },
+    "cafCiwc": {
+      "canonical": "change_in_working_capital",
+      "entity": "cash_flow_statement"
+    },
+    "cafCfoa": {
+      "canonical": "cash_flow_from_operations",
+      "entity": "cash_flow_statement"
+    },
+    "cafCexp": {
+      "canonical": "capital_expenditure",
+      "transform": {
+        "op": "expr",
+        "expr": "-cafCexp"
+      },
+      "note": "Vendor emits a positive amount; canonical is negative (outflow).",
+      "entity": "cash_flow_statement"
+    },
+    "cafCfia": {
+      "canonical": "cash_flow_from_investing",
+      "entity": "cash_flow_statement"
+    },
+    "cafTcdp": {
+      "canonical": "dividends_paid",
+      "transform": {
+        "op": "expr",
+        "expr": "-cafTcdp"
+      },
+      "note": "Vendor emits a positive amount; canonical is negative (outflow).",
+      "entity": "cash_flow_statement"
+    },
+    "cafCffa": {
+      "canonical": "cash_flow_from_financing",
+      "entity": "cash_flow_statement"
+    },
+    "cafFee": {
+      "canonical": "fx_effect_on_cash",
+      "confidence": "medium",
+      "entity": "cash_flow_statement"
+    },
+    "cafNcic": {
+      "canonical": "net_change_in_cash",
+      "entity": "cash_flow_statement"
+    },
+    "cafFcf": {
+      "canonical": "free_cash_flow",
+      "entity": "cash_flow_statement"
+    },
+    "aopm": {
+      "canonical": "ebitda_margin",
+      "entity": "financial_ratio"
+    },
+    "pftMrg": {
+      "canonical": "net_profit_margin",
+      "entity": "financial_ratio"
+    },
+    "cafCfoaMgn": {
+      "canonical": "operating_cash_flow_margin",
+      "entity": "financial_ratio"
+    },
+    "opmg": {
+      "canonical": "ebitda_margin_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "5YpftMrg": {
+      "canonical": "net_profit_margin_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "5YcafCfoaMgn": {
+      "canonical": "operating_cash_flow_margin_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "roe": {
+      "canonical": "return_on_equity",
+      "entity": "financial_ratio"
+    },
+    "5Yroe": {
+      "canonical": "return_on_equity_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "rtnAsts": {
+      "canonical": "return_on_assets",
+      "entity": "financial_ratio"
+    },
+    "5YrtnAsts": {
+      "canonical": "return_on_assets_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "aroi": {
+      "canonical": "return_on_invested_capital",
+      "entity": "financial_ratio"
+    },
+    "5Yaroi": {
+      "canonical": "return_on_invested_capital_avg_5y",
+      "entity": "financial_ratio"
+    },
+    "roce": {
+      "canonical": "return_on_capital_employed",
+      "entity": "financial_ratio"
+    },
+    "erngPwrR": {
+      "canonical": "basic_earning_power",
+      "entity": "financial_ratio"
+    },
+    "asstTurnR": {
+      "canonical": "asset_turnover",
+      "entity": "financial_ratio"
+    },
+    "wcTurnR": {
+      "canonical": "working_capital_turnover",
+      "entity": "financial_ratio"
+    },
+    "invTurnR": {
+      "canonical": "inventory_turnover",
+      "entity": "financial_ratio"
+    },
+    "daysOfInvOstndng": {
+      "canonical": "days_inventory_outstanding",
+      "entity": "financial_ratio"
+    },
+    "daysSalesOstndng": {
+      "canonical": "days_sales_outstanding",
+      "entity": "financial_ratio"
+    },
+    "daysPayOstndng": {
+      "canonical": "days_payables_outstanding",
+      "entity": "financial_ratio"
+    },
+    "ccnc": {
+      "canonical": "cash_conversion_cycle",
+      "entity": "financial_ratio"
+    },
+    "qcur": {
+      "canonical": "current_ratio",
+      "entity": "financial_ratio"
+    },
+    "aqui": {
+      "canonical": "quick_ratio",
+      "entity": "financial_ratio"
+    },
+    "dbtEqt": {
+      "canonical": "debt_to_equity",
+      "entity": "financial_ratio"
+    },
+    "ldbtEqt": {
+      "canonical": "long_term_debt_to_equity",
+      "entity": "financial_ratio"
+    },
+    "aint": {
+      "canonical": "interest_coverage_ratio",
+      "entity": "financial_ratio"
+    },
+    "netIncByLbl": {
+      "canonical": "net_income_to_total_liabilities",
+      "entity": "financial_ratio"
+    },
+    "rvng": {
+      "canonical": "revenue_growth_yoy",
+      "entity": "financial_ratio"
+    },
+    "ebitg": {
+      "canonical": "ebitda_growth_yoy",
+      "entity": "financial_ratio"
+    },
+    "epsg": {
+      "canonical": "eps_growth_yoy",
+      "entity": "financial_ratio"
+    },
+    "cfog": {
+      "canonical": "operating_cash_flow_growth_yoy",
+      "entity": "financial_ratio"
+    },
+    "5YrevChg": {
+      "canonical": "revenue_cagr_5y",
+      "entity": "financial_ratio"
+    },
+    "earnings": {
+      "canonical": "ebitda_cagr_5y",
+      "note": "Vendor label 'earnings' is actually the 5Y CAGR of EBITDA.",
+      "entity": "financial_ratio"
+    },
+    "epsGwth": {
+      "canonical": "eps_cagr_5y",
+      "entity": "financial_ratio"
+    },
+    "cfotr": {
+      "canonical": "operating_cash_flow_cagr_5y",
+      "entity": "financial_ratio"
+    },
+    "3YdivGwth": {
+      "canonical": "dividend_per_share_cagr_3y",
+      "entity": "financial_ratio"
+    },
+    "marketCap": {
+      "canonical": "market_cap",
+      "entity": "valuation_snapshot"
+    },
+    "mrktCapf": {
+      "canonical": "market_cap",
+      "entity": "valuation_snapshot"
+    },
+    "ev": {
+      "canonical": "enterprise_value",
+      "entity": "valuation_snapshot"
+    },
+    "eps": {
+      "canonical": "eps_ttm",
+      "entity": "valuation_snapshot"
+    },
+    "ttmPe": {
+      "canonical": "pe_ttm",
+      "entity": "valuation_snapshot"
+    },
+    "apef": {
+      "canonical": "pe_last_fy",
+      "entity": "valuation_snapshot"
+    },
+    "pe": {
+      "canonical": "pe_last_fy",
+      "entity": "valuation_snapshot"
+    },
+    "pef": {
+      "canonical": "pe_forward",
+      "entity": "valuation_snapshot"
+    },
+    "pbr": {
+      "canonical": "price_to_book",
+      "entity": "valuation_snapshot"
+    },
+    "pb": {
+      "canonical": "price_to_book",
+      "entity": "valuation_snapshot"
+    },
+    "ps": {
+      "canonical": "price_to_sales_last_fy",
+      "entity": "valuation_snapshot"
+    },
+    "priceBySales": {
+      "canonical": "price_to_sales_ttm",
+      "entity": "valuation_snapshot"
+    },
+    "psf": {
+      "canonical": "price_to_sales_forward",
+      "entity": "valuation_snapshot"
+    },
+    "evebitd": {
+      "canonical": "ev_to_ebitda",
+      "entity": "valuation_snapshot"
+    },
+    "evebit": {
+      "canonical": "ev_to_ebit",
+      "entity": "valuation_snapshot"
+    },
+    "evByRev": {
+      "canonical": "ev_to_sales",
+      "entity": "valuation_snapshot"
+    },
+    "evByIc": {
+      "canonical": "ev_to_invested_capital",
+      "entity": "valuation_snapshot"
+    },
+    "lcpCafFcf": {
+      "canonical": "price_to_free_cash_flow",
+      "entity": "valuation_snapshot"
+    },
+    "evCafFcf": {
+      "canonical": "ev_to_free_cash_flow",
+      "entity": "valuation_snapshot"
+    },
+    "priceCfoR": {
+      "canonical": "price_to_operating_cash_flow",
+      "entity": "valuation_snapshot"
+    },
+    "divDps": {
+      "canonical": "dividend_yield",
+      "entity": "valuation_snapshot"
+    },
+    "divYield": {
+      "canonical": "dividend_yield",
+      "entity": "valuation_snapshot"
+    },
+    "estGrowth": {
+      "canonical": "assumed_forward_growth",
+      "entity": "valuation_snapshot"
+    },
+    "ped": {
+      "canonical": "pe_premium_to_group",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "pePremSi": {
+      "canonical": "pe_premium_to_group",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "pbd": {
+      "canonical": "pb_premium_to_group",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "pbPremSi": {
+      "canonical": "pb_premium_to_group",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "psfs": {
+      "canonical": "ps_premium_to_group",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "psPremSi": {
+      "canonical": "ps_premium_to_group",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "divSec": {
+      "canonical": "dividend_yield_spread_to_group",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "dyPremSs": {
+      "canonical": "dividend_yield_spread_to_group",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "valuation_snapshot"
+    },
+    "indpe": {
+      "canonical": "group_pe",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "subPe": {
+      "canonical": "group_pe",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "indpb": {
+      "canonical": "group_pb",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "subPb": {
+      "canonical": "group_pb",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "indps": {
+      "canonical": "group_ps",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "subPs": {
+      "canonical": "group_ps",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "inddy": {
+      "canonical": "group_dividend_yield",
+      "params": {
+        "group_level": "sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "subDy": {
+      "canonical": "group_dividend_yield",
+      "params": {
+        "group_level": "sub_sector"
+      },
+      "entity": "group_valuation_benchmark"
+    },
+    "o": {
+      "canonical": "open_price",
+      "entity": "price_bar"
+    },
+    "h": {
+      "canonical": "high_price",
+      "entity": "price_bar"
+    },
+    "l": {
+      "canonical": "low_price",
+      "entity": "price_bar"
+    },
+    "c": {
+      "canonical": "close_price",
+      "entity": "price_bar"
+    },
+    "price": {
+      "canonical": "close_price",
+      "entity": "price_bar"
+    },
+    "lastPrice": {
+      "canonical": "close_price",
+      "entity": "price_bar"
+    },
+    "v": {
+      "canonical": "volume",
+      "entity": "price_bar"
+    },
+    "acVol": {
+      "canonical": "volume",
+      "entity": "price_bar"
+    },
+    "r": {
+      "canonical": "daily_return",
+      "entity": "price_bar"
+    },
+    "n": {
+      "canonical": "index_close",
+      "entity": "index_bar"
+    },
+    "nr": {
+      "canonical": "index_daily_return",
+      "entity": "index_bar"
+    },
+    "stock": {
+      "canonical": "monthly_return",
+      "note": "series_id = subject instrument",
+      "entity": "monthly_return"
+    },
+    "nifty": {
+      "canonical": "monthly_return",
+      "note": "series_id = NIFTY50",
+      "entity": "monthly_return"
+    },
+    "pr1d": {
+      "canonical": "price_return",
+      "params": {
+        "window": "1d"
+      },
+      "entity": "market_activity"
+    },
+    "pr1w": {
+      "canonical": "price_return",
+      "params": {
+        "window": "1w"
+      },
+      "entity": "market_activity"
+    },
+    "4wpct": {
+      "canonical": "price_return",
+      "params": {
+        "window": "1m"
+      },
+      "note": "4 weeks = 21 trading days",
+      "entity": "market_activity"
+    },
+    "26wpct": {
+      "canonical": "price_return",
+      "params": {
+        "window": "6m"
+      },
+      "note": "26 weeks = 126 trading days",
+      "entity": "market_activity"
+    },
+    "52wpct": {
+      "canonical": "price_return",
+      "params": {
+        "window": "1y"
+      },
+      "note": "52 weeks = 252 trading days",
+      "entity": "market_activity"
+    },
+    "pr1wN": {
+      "canonical": "relative_return",
+      "params": {
+        "window": "1w",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "market_activity"
+    },
+    "4wpctN": {
+      "canonical": "relative_return",
+      "params": {
+        "window": "1m",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "market_activity"
+    },
+    "6mpctN": {
+      "canonical": "relative_return",
+      "params": {
+        "window": "6m",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "market_activity"
+    },
+    "12mpctN": {
+      "canonical": "relative_return",
+      "params": {
+        "window": "1y",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "market_activity"
+    },
+    "5yCagrPct": {
+      "canonical": "price_cagr",
+      "params": {
+        "window": "5y"
+      },
+      "entity": "market_activity"
+    },
+    "vol1mAvg": {
+      "canonical": "avg_volume",
+      "params": {
+        "window": "1m"
+      },
+      "entity": "market_activity"
+    },
+    "vol3mAvg": {
+      "canonical": "avg_volume",
+      "params": {
+        "window": "3m"
+      },
+      "entity": "market_activity"
+    },
+    "3mAvgVol": {
+      "canonical": "avg_volume",
+      "params": {
+        "window": "3m"
+      },
+      "note": "Duplicate of vol3mAvg.",
+      "entity": "market_activity"
+    },
+    "vol1dChPct": {
+      "canonical": "volume_change",
+      "params": {
+        "window": "1d"
+      },
+      "entity": "market_activity"
+    },
+    "vol1wChPct": {
+      "canonical": "volume_change",
+      "params": {
+        "window": "1w"
+      },
+      "entity": "market_activity"
+    },
+    "52wHigh": {
+      "canonical": "high_52w",
+      "entity": "market_activity"
+    },
+    "52wLow": {
+      "canonical": "low_52w",
+      "entity": "market_activity"
+    },
+    "52whd": {
+      "canonical": "pct_from_52w_high",
+      "entity": "market_activity"
+    },
+    "52wld": {
+      "canonical": "pct_from_52w_low",
+      "entity": "market_activity"
+    },
+    "mrktCapRank": {
+      "canonical": "market_cap_rank",
+      "entity": "market_activity"
+    },
+    "marketCapLabel": {
+      "canonical": "market_cap_category",
+      "transform": {
+        "op": "enum_map",
+        "map": {
+          "Largecap": "large_cap",
+          "Midcap": "mid_cap",
+          "Smallcap": "small_cap"
+        }
+      },
+      "note": "Vendor uses a fixed Rs 20,000 cr threshold; canonical is rank-based.",
+      "entity": "market_activity"
+    },
+    "12mVol": {
+      "canonical": "volatility",
+      "params": {
+        "window": "1y"
+      },
+      "note": "Peers use monthly returns (return_frequency=monthly).",
+      "entity": "risk_metric"
+    },
+    "12mVolN": {
+      "canonical": "relative_volatility",
+      "params": {
+        "window": "1y",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "risk_metric"
+    },
+    "beta": {
+      "canonical": "beta",
+      "params": {
+        "window": "1y",
+        "benchmark_id": "NIFTY50"
+      },
+      "entity": "risk_metric"
+    },
+    "3Ywsh": {
+      "canonical": "sharpe_ratio",
+      "params": {
+        "window": "3y",
+        "risk_free_id": "constant_6.5pct"
+      },
+      "entity": "risk_metric"
+    },
+    "3Ywal": {
+      "canonical": "jensens_alpha",
+      "params": {
+        "window": "3y",
+        "benchmark_id": "NIFTY50",
+        "risk_free_id": "constant_6.5pct"
+      },
+      "entity": "risk_metric"
+    },
+    "maxDrawdown": {
+      "canonical": "max_drawdown",
+      "params": {
+        "window": "1y"
+      },
+      "entity": "risk_metric"
+    },
+    "strown": {
+      "canonical": "promoter_holding",
+      "entity": "shareholding_pattern"
+    },
+    "promShrPled": {
+      "canonical": "promoter_pledged",
+      "confidence": "medium",
+      "note": "Assumed % of promoter holding, not % of total shares.",
+      "entity": "shareholding_pattern"
+    },
+    "forInstHldng": {
+      "canonical": "foreign_institutional_holding",
+      "entity": "shareholding_pattern"
+    },
+    "domInstHldng": {
+      "canonical": "domestic_institutional_holding",
+      "entity": "shareholding_pattern"
+    },
+    "instown": {
+      "canonical": "mutual_fund_holding",
+      "confidence": "medium",
+      "note": "Vendor label suggests 'institutional'; generator uses mutual funds.",
+      "entity": "shareholding_pattern"
+    },
+    "insHolding": {
+      "canonical": "insurance_holding",
+      "entity": "shareholding_pattern"
+    },
+    "otherDiiHolding": {
+      "canonical": "other_domestic_institutional_holding",
+      "entity": "shareholding_pattern"
+    },
+    "retailHolding": {
+      "canonical": "non_institutional_public_holding",
+      "entity": "shareholding_pattern"
+    },
+    "othersHolding": {
+      "canonical": "other_holding",
+      "entity": "shareholding_pattern"
+    },
+    "nShareholders": {
+      "canonical": "number_of_shareholders",
+      "entity": "shareholding_pattern"
+    },
+    "strown3": {
+      "canonical": "promoter_holding_chg_1q",
+      "entity": "shareholding_pattern"
+    },
+    "chPromHldng6M": {
+      "canonical": "promoter_holding_chg_2q",
+      "entity": "shareholding_pattern"
+    },
+    "domInstHldng3M": {
+      "canonical": "domestic_institutional_holding_chg_1q",
+      "entity": "shareholding_pattern"
+    },
+    "domInstHldng6M": {
+      "canonical": "domestic_institutional_holding_chg_2q",
+      "entity": "shareholding_pattern"
+    },
+    "forInstHldng3M": {
+      "canonical": "foreign_institutional_holding_chg_1q",
+      "entity": "shareholding_pattern"
+    },
+    "forInstHldng6M": {
+      "canonical": "foreign_institutional_holding_chg_2q",
+      "entity": "shareholding_pattern"
+    },
+    "instown3": {
+      "canonical": "mutual_fund_holding_chg_1q",
+      "entity": "shareholding_pattern"
+    },
+    "chMutHldng6M": {
+      "canonical": "mutual_fund_holding_chg_2q",
+      "entity": "shareholding_pattern"
+    },
+    "estrvng": {
+      "canonical": "consensus_revenue_growth",
+      "entity": "analyst_consensus"
+    },
+    "estAvg": {
+      "canonical": "consensus_earnings_growth",
+      "confidence": "low",
+      "note": "Meaning inferred; confirm against the master hierarchy.",
+      "entity": "analyst_consensus"
+    },
+    "12mEpsg": {
+      "canonical": "consensus_eps_growth_12m",
+      "entity": "analyst_consensus"
+    },
+    "ecfog": {
+      "canonical": "consensus_operating_cash_flow_growth",
+      "entity": "analyst_consensus"
+    },
+    "breco": {
+      "canonical": "analyst_buy_pct",
+      "entity": "analyst_consensus"
+    },
+    "isSubject": {
+      "canonical": "is_subject",
+      "entity": "peer_group_member"
+    },
+    "rank": {
+      "canonical": "peer_rank",
+      "entity": "peer_rank"
+    },
+    "lo": {
+      "canonical": "bucket_low",
+      "entity": "volume_profile_bucket"
+    },
+    "hi": {
+      "canonical": "bucket_high",
+      "entity": "volume_profile_bucket"
+    },
+    "vol": {
+      "canonical": "bucket_volume",
+      "entity": "volume_profile_bucket"
+    },
+    "upVol": {
+      "canonical": "bucket_up_volume",
+      "entity": "volume_profile_bucket"
+    },
+    "downVol": {
+      "canonical": "bucket_down_volume",
+      "entity": "volume_profile_bucket"
+    },
+    "dd": {
+      "canonical": "drawdown",
+      "entity": "drawdown_series"
+    },
+    "balOcl": {
+      "canonical": null,
+      "input_only_for": [
+        "other_current_liabilities"
+      ]
+    }
+  },
+  "paths": {
+    "meta.generatedBy": {
+      "canonical": "generator",
+      "entity": "dataset_manifest"
+    },
+    "meta.seed": {
+      "canonical": "generator_seed",
+      "entity": "dataset_manifest"
+    },
+    "meta.asOf": {
+      "canonical": "dataset_as_of_date",
+      "entity": "dataset_manifest"
+    },
+    "meta.currency": {
+      "canonical": "currency",
+      "transform": {
+        "op": "regex",
+        "pattern": "^([A-Z]{3})"
+      },
+      "note": "Vendor string 'INR crore (prices in INR)' also carries the scale.",
+      "entity": "dataset_manifest"
+    },
+    "meta.notes": {
+      "canonical": "dataset_notes",
+      "entity": "dataset_manifest"
+    },
+    "meta.company": {
+      "canonical": "display_name",
+      "note": "Strip the '(fictional)' suffix.",
+      "entity": "company"
+    },
+    "meta.fiscalYearEnd": {
+      "canonical": "fiscal_year_end_month",
+      "transform": {
+        "op": "parse_month_name"
+      },
+      "entity": "company"
+    },
+    "info.gic.sector": {
+      "canonical": "class_level_1",
+      "params": {
+        "class_scheme": "gics"
+      },
+      "entity": "company_classification"
+    },
+    "info.info.sector": {
+      "canonical": "class_level_1",
+      "params": {
+        "class_scheme": "vendor_sector"
+      },
+      "entity": "company_classification"
+    },
+    "info.gic.industrygroup": {
+      "canonical": "class_level_2",
+      "params": {
+        "class_scheme": "gics"
+      },
+      "entity": "company_classification"
+    },
+    "info.gic.industry": {
+      "canonical": "class_level_3",
+      "params": {
+        "class_scheme": "gics"
+      },
+      "entity": "company_classification"
+    },
+    "info.gic.subindustry": {
+      "canonical": "class_level_4",
+      "params": {
+        "class_scheme": "gics"
+      },
+      "entity": "company_classification"
+    },
+    "info.ratios.risk": {
+      "canonical": "relative_volatility",
+      "params": {
+        "window": "1y",
+        "benchmark_id": "NIFTY50"
+      },
+      "note": "Duplicate of 12mVolN.",
+      "entity": "risk_metric"
+    },
+    "snapshot.risk": {
+      "canonical": "relative_volatility",
+      "params": {
+        "window": "1y",
+        "benchmark_id": "NIFTY50"
+      },
+      "note": "Duplicate of 12mVolN (group files).",
+      "entity": "risk_metric"
+    },
+    "summary.forecast.totalReco": {
+      "canonical": "analyst_recommendation_count",
+      "entity": "analyst_consensus"
+    },
+    "summary.forecast.percBuyReco": {
+      "canonical": "analyst_buy_pct",
+      "entity": "analyst_consensus"
+    }
+  },
+  "synthetic": [
+    {
+      "canonical": "short_term_debt",
+      "expr": "balTdeb - balTltd",
+      "note": "Vendor does not emit short-term debt; it is total minus long-term."
+    },
+    {
+      "canonical": "other_current_liabilities",
+      "expr": "balOcl - (balTdeb - balTltd)",
+      "note": "Vendor balOcl already includes short-term debt."
+    }
+  ],
+  "unresolved": {
+    "incCrev": {
+      "entity": "income_statement",
+      "observed": "always null",
+      "candidates": [
+        "cost of revenue",
+        "core / operating revenue"
+      ],
+      "action": "Confirm against the vendor field hierarchy."
+    },
+    "incOpc": {
+      "entity": "income_statement",
+      "observed": "always null",
+      "candidates": [
+        "operating costs",
+        "operating income / profit"
+      ],
+      "action": "Confirm against the vendor field hierarchy."
+    }
+  },
+  "excluded_paths": {
+    "info.slug": "UI routing string",
+    "info.labels": "UI labels derived from other fields",
+    "info.info.tags": "UI tags",
+    "info.gic.short": "UI short label",
+    "summary.financialSummary": "UI composite duplicating the statements",
+    "summary.aboutAndPeers": "UI composite duplicating peer data",
+    "summary.keyRatios": "UI composite duplicating valuation data",
+    "meta.coverage": "Descriptive coverage text; regenerate from the data"
+  },
+  "structural_keys": [
+    "meta",
+    "info",
+    "summary",
+    "forecast",
+    "financials_income",
+    "financials_balance",
+    "financials_cashflow",
+    "financials_income_quarterly",
+    "ratios_history",
+    "valuation_history",
+    "shareholding_history",
+    "price_history",
+    "volume_profile_1y",
+    "risk",
+    "universe",
+    "monthly",
+    "fiscalYearEnd",
+    "bands",
+    "latest",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "rolling",
+    "drawdownDaily",
+    "monthlyReturns",
+    "peers",
+    "ratios",
+    "snapshot",
+    "history",
+    "annual",
+    "quarterly",
+    "prices",
+    "volumeProfile1Y",
+    "gic"
+  ],
+  "containers": [
+    {
+      "path": "financials_income[]",
+      "entity": "income_statement",
+      "period_type": "annual (TTM row labelled 'TTM')"
+    },
+    {
+      "path": "financials_income_quarterly[]",
+      "entity": "income_statement",
+      "period_type": "quarterly"
+    },
+    {
+      "path": "financials_balance[]",
+      "entity": "balance_sheet",
+      "period_type": "annual"
+    },
+    {
+      "path": "financials_cashflow[]",
+      "entity": "cash_flow_statement",
+      "period_type": "annual"
+    },
+    {
+      "path": "ratios_history[]",
+      "entity": "financial_ratio",
+      "period_type": "annual"
+    },
+    {
+      "path": "valuation_history.monthly[]",
+      "entity": "valuation_snapshot",
+      "also": [
+        "group_valuation_benchmark",
+        "price_bar.close_price"
+      ],
+      "grain": "month-end as_of_date"
+    },
+    {
+      "path": "valuation_history.fiscalYearEnd[]",
+      "entity": "valuation_snapshot",
+      "grain": "fiscal-year-end as_of_date"
+    },
+    {
+      "path": "valuation_history.latest",
+      "entity": "valuation_snapshot",
+      "grain": "dataset as_of_date"
+    },
+    {
+      "path": "valuation_history.bands",
+      "entity": "valuation_band",
+      "shape": "wide (metric -> p10..p90) to long"
+    },
+    {
+      "path": "shareholding_history[]",
+      "entity": "shareholding_pattern",
+      "grain": "fiscal_year + fiscal_quarter"
+    },
+    {
+      "path": "price_history[]",
+      "entity": "price_bar + index_bar",
+      "shape": "o,h,l,c,v,r -> price_bar; n,nr -> index_bar (index_id=NIFTY50)"
+    },
+    {
+      "path": "volume_profile_1y[]",
+      "entity": "volume_profile_bucket"
+    },
+    {
+      "path": "risk.rolling[]",
+      "entity": "risk_metric",
+      "shape": "wide columns -> parameterised rows"
+    },
+    {
+      "path": "risk.drawdownDaily[]",
+      "entity": "drawdown_series"
+    },
+    {
+      "path": "risk.monthlyReturns",
+      "entity": "monthly_return",
+      "shape": "column arrays -> long (series_id, month_end_date)"
+    },
+    {
+      "path": "universe[]",
+      "entity": "company + peer_group_member"
+    },
+    {
+      "path": "universe[].snapshot",
+      "entity": "financial_ratio / valuation_snapshot / risk_metric / market_activity / shareholding_pattern",
+      "grain": "dataset as_of_date"
+    },
+    {
+      "path": "universe[].history[]",
+      "entity": "income_statement / financial_ratio / valuation_snapshot / peer_rank",
+      "grain": "fiscal_year"
+    },
+    {
+      "path": "info.ratios",
+      "entity": "snapshot row spanning several entities",
+      "grain": "dataset as_of_date"
+    },
+    {
+      "path": "info / info.info / info.gic",
+      "entity": "company + instrument + company_classification"
+    },
+    {
+      "path": "meta",
+      "entity": "dataset_manifest"
+    }
+  ],
+  "known_issues": [
+    {
+      "id": "unit_payout_fraction",
+      "severity": "high",
+      "codes": [
+        "incPyr"
+      ],
+      "finding": "Payout ratio is a fraction (0.24) while every other ratio is in percent points.",
+      "handling": "Mapping multiplies by 100; generator should emit percent points."
+    },
+    {
+      "id": "nca_excludes_other",
+      "severity": "high",
+      "codes": [
+        "balNca",
+        "balOtha"
+      ],
+      "finding": "balNca excludes balOtha, yet total assets include both.",
+      "handling": "Mapping sums them into total_non_current_assets."
+    },
+    {
+      "id": "ocl_includes_std",
+      "severity": "high",
+      "codes": [
+        "balOcl"
+      ],
+      "finding": "balOcl contains short-term debt as well as other current liabilities.",
+      "handling": "Synthetic mapping splits it using balTdeb - balTltd."
+    },
+    {
+      "id": "cash_flow_sign",
+      "severity": "medium",
+      "codes": [
+        "cafCexp",
+        "cafTcdp"
+      ],
+      "finding": "Capex and dividends paid are positive while investing/financing totals are signed.",
+      "handling": "Mapping negates them (cash-effect sign convention)."
+    },
+    {
+      "id": "earnings_code",
+      "severity": "medium",
+      "codes": [
+        "earnings"
+      ],
+      "finding": "Code 'earnings' is the 5-year CAGR of EBITDA, not earnings.",
+      "handling": "Mapped to ebitda_cagr_5y."
+    },
+    {
+      "id": "opex_name_collision",
+      "severity": "medium",
+      "codes": [
+        "incOpe",
+        "qIncOpeK"
+      ],
+      "finding": "incOpe is the residual 'other operating expense'; qIncOpeK is total opex.",
+      "handling": "Different canonical fields."
+    },
+    {
+      "id": "roic_capital_definition",
+      "severity": "medium",
+      "codes": [
+        "aroi",
+        "evByIc"
+      ],
+      "finding": "ROIC divides by gross capital; EV/IC uses capital net of cash.",
+      "handling": "Both kept; definitions documented. Pick one."
+    },
+    {
+      "id": "iso_midnight_utc",
+      "severity": "medium",
+      "codes": [
+        "endDate"
+      ],
+      "finding": "Date-only values are emitted as midnight UTC timestamps.",
+      "handling": "Mapping converts to plain dates."
+    },
+    {
+      "id": "peer_inconsistency",
+      "severity": "medium",
+      "codes": [
+        "epsg",
+        "12mVol",
+        "beta",
+        "qcur",
+        "aint",
+        "ccnc"
+      ],
+      "finding": "Peer snapshots are not derived from peer histories: epsg is net-income growth, risk uses monthly returns, and qcur/aint/ccnc are random.",
+      "handling": "Replace with the shared company engine (next step)."
+    },
+    {
+      "id": "market_cap_label",
+      "severity": "medium",
+      "codes": [
+        "marketCapLabel"
+      ],
+      "finding": "Fixed Rs 20,000 cr threshold; Indian practice is the AMFI rank-based list.",
+      "handling": "Mapped to rank-based enum; generator should rank within a universe."
+    },
+    {
+      "id": "consensus_hardcoded",
+      "severity": "low",
+      "codes": [
+        "breco",
+        "summary.forecast.totalReco",
+        "summary.forecast.percBuyReco"
+      ],
+      "finding": "Recommendation figures are constants for the subject and random for peers.",
+      "handling": "Model consensus properly when the estimates domain is built."
+    },
+    {
+      "id": "duplicate_aliases",
+      "severity": "low",
+      "codes": [
+        "balCa",
+        "3mAvgVol",
+        "pe",
+        "pb",
+        "mrktCapf",
+        "info.ratios.risk",
+        "bps",
+        "divYield",
+        "bookValue"
+      ],
+      "finding": "Several codes duplicate others under a different name.",
+      "handling": "Mapped to the same canonical field; drop duplicates at the source."
+    },
+    {
+      "id": "market_cap_share_basis",
+      "severity": "low",
+      "codes": [
+        "marketCap",
+        "ev"
+      ],
+      "finding": "Market cap uses fiscal-year share count; EV omits minority interest and investments.",
+      "handling": "Documented in field notes."
+    },
+    {
+      "id": "ttm_dividend",
+      "severity": "low",
+      "codes": [
+        "incDps",
+        "incPyr"
+      ],
+      "finding": "TTM row takes dividend from the latest fiscal year, not trailing quarters.",
+      "handling": "Flag when rebuilding TTM."
+    },
+    {
+      "id": "rounding",
+      "severity": "low",
+      "codes": [],
+      "finding": "Output is rounded to 2 decimals, which loses precision for small ratios and betas.",
+      "handling": "Store full precision; round at presentation."
+    },
+    {
+      "id": "calendar_approx",
+      "severity": "low",
+      "codes": [],
+      "finding": "Trading calendar uses a handful of fixed-date holidays, no Muhurat/special sessions.",
+      "handling": "Use the trading_calendar entity with the real exchange list."
+    }
+  ]
+}
