@@ -1,0 +1,469 @@
+
+TICKERTAPE — MASTER DATA CLASSIFICATION
+|
++-- 01. COMPANY OVERVIEW
+|   |
+|   +-- Company Classification
+|   |   +-- Sector (sector)
+|   |   +-- Sub-Sector (subindustry)
+|   |
+|   +-- Company Size
+|       +-- Market Capitalisation (mrktCapf)
+|
++-- 02. INCOME STATEMENT [Sankey Diagram]
+|   |
+|   +-- A. Annual Income Statement [Multi-series Line Chart]
+|   |   |
+|   |   +-- Revenue [Area Chart]
+|   |   |   +-- Total Revenue (incTrev) 
+|   |   |
+|   |   +-- Cost of Goods Sold and Operating Costs [Stacked Bar Chart]
+|   |   |   +-- Cost of Goods Sold (balCogs)
+|   |   |   +-- Raw Materials (incRaw)
+|   |   |   +-- Power & Fuel Cost (incPfc)
+|   |   |   +-- Employee Cost (incEpc)
+|   |   |   +-- Selling & Administrative Expenses (incSga)
+|   |   |   +-- Operating & Other Expenses (incOpe)
+|   |   |
+|   |   +-- Operating Profit [Combo Chart (Bar + Line)]
+|   |   |   +-- EBITDA (incEbi)
+|   |   |   +-- Depreciation & Amortization (incDep)
+|   |   |   +-- PBIT (incPbi)
+|   |   |
+|   |   +-- Non-operating Items and Tax [Waterfall Chart]
+|   |   |   +-- Interest & Other Items (incIoi)
+|   |   |   +-- PBT (incPbt)
+|   |   |   +-- Taxes & Other Items (incToi)
+|   |   |
+|   |   +-- Net Income and Per-share Metrics [Combo Chart (Bar + Line)]
+|   |       +-- Net Income (incNinc)
+|   |       +-- Earnings Per Share (incEps)
+|   |       +-- Dividend Per Share (incDps)
+|   |       +-- Payout Ratio (incPyr)
+|   |
+|   +-- B. Quarterly Income Statement [Multi-series Line Chart]
+|       |
+|       +-- Revenue [Area Chart]
+|       |   +-- Total Revenue (Q) (qIncTrevK)
+|       |
+|       +-- Operating Costs [Stacked Bar Chart]
+|       |   +-- Operating & Other Expenses (Q) (qIncOpeK)
+|       |
+|       +-- Operating Profit [Combo Chart (Bar + Line)]
+|       |   +-- EBITDA (Q) (qIncEbiK)
+|       |   +-- PBIT (Q) (qIncPbiK)
+|       |
+|       +-- Profit Before Tax [Waterfall Chart]
+|       |   +-- PBT (Q) (qIncPbtK)
+|       |
+|       +-- Net Income and Per-share Metrics [Combo Chart (Bar + Line)]
+|           +-- Net Income (Q) (qIncNincK)
+|           +-- EPS (Q) (qIncEpsK)
+|
++-- 03. BALANCE SHEET [Mirrored Stacked Bar Chart]
+|   |
+|   +-- A. Assets [Treemap]
+|   |   |
+|   |   +-- Current Assets
+|   |   |   +-- Cash and Equivalent (balCsti)
+|   |   |   +-- Total Receivables (balTrec)
+|   |   |   +-- Total Inventory (balTinv)
+|   |   |   +-- Other Current Assets (balOca)
+|   |   |   +-- Total Current Assets (balTca)
+|   |   |
+|   |   +-- Non-current Assets
+|   |   |   +-- Net Property, Plant & Equipment (balNppe)
+|   |   |   +-- Goodwill & Intangibles (balGint)
+|   |   |   +-- Long Term Investments (balLti)
+|   |   |   +-- Deferred Tax Assets (Net) (balDta)
+|   |   |   +-- Non Current Assets (balNca)
+|   |   |
+|   |   +-- Other Assets
+|   |   |   +-- Other Assets (balOtha)
+|   |   |
+|   |   +-- Bank-specific Assets
+|   |   |   +-- Loans & Advances (balNetl)
+|   |   |
+|   |   +-- Total Assets
+|   |       +-- Total Assets (balTota)
+|   |
+|   +-- B. Liabilities [Treemap]
+|   |   |
+|   |   +-- Current Liabilities
+|   |   |   +-- Accounts Payable (balAccp)
+|   |   |   +-- Other Current Liabilities (balOcl)
+|   |   |   +-- Total Current Liabilities (balTcl)
+|   |   |
+|   |   +-- Debt and Borrowings
+|   |   |   +-- Total Debt (balTdeb)
+|   |   |   +-- Long Term Debt (balTltd)
+|   |   |
+|   |   +-- Non-current and Other Liabilities
+|   |   |   +-- Deferred Tax Liabilities (Net) (balDit)
+|   |   |   +-- Other Liabilities (balOthl)
+|   |   |   +-- Non Current Liabilities (balNcl)
+|   |   |
+|   |   +-- Bank-specific Liabilities
+|   |   |   +-- Total Deposits – Banks (balTdep)
+|   |   |
+|   |   +-- Total Liabilities
+|   |       +-- Total Liabilities (balTotl)
+|   |
+|   +-- C. Shareholders' Equity [Treemap]
+|   |   |
+|   |   +-- Share Capital
+|   |   |   +-- Share Capital (balComs)
+|   |   |   +-- Additional Paid-in Capital (balApic)
+|   |   |   +-- Face Value (faceValue)
+|   |   |
+|   |   +-- Reserves and Other Equity
+|   |   |   +-- Reserves & Surplus (balRtne)
+|   |   |   +-- Minority Interest (balMint)
+|   |   |
+|   |   +-- Total Equity
+|   |   |   +-- Total Equity (balTeq)
+|   |   |
+|   |   +-- Share Capitalisation
+|   |       +-- Common Shares Outstanding (balTcso)
+|   |
+|   +-- D. Equity Valuation Base [ Multi-series Line Chart]
+|       +-- Book Value (bookValue)
+|
++-- 04. CASH FLOW STATEMENT
+|   |
+|   +-- A. Operating Activities
+|   |   +-- Operating Cash Flow (cafCfoa)
+|   |   +-- Change in Working Capital (cafCiwc)
+|   |
+|   +-- B. Investing Activities
+|   |   +-- Investing Cash Flow (cafCfia)
+|   |   +-- Capital Expenditure (cafCexp)
+|   |
+|   +-- C. Financing Activities
+|   |   +-- Financing Cash Flow (cafCffa)
+|   |   +-- Total Cash Dividend Paid (cafTcdp)
+|   |
+|   +-- D. Cash Flow Totals and Derived Metrics
+|       +-- Net Change in Cash (cafNcic)
+|       +-- Free Cash Flow (cafFcf)
+|
++-- 05. PROFITABILITY AND RETURNS
+|   |
+|   +-- A. Profit Margins
+|   |   +-- EBITDA Margin (aopm)
+|   |   +-- 5Y Avg EBITDA Margin (opmg)
+|   |   +-- Net Profit Margin (pftMrg)
+|   |   +-- 5Y Avg Net Profit Margin (5YpftMrg)
+|   |
+|   +-- B. Return on Capital and Equity
+|   |   +-- Return on Equity (roe)
+|   |   +-- 5Y Avg Return on Equity (5Yroe)
+|   |   +-- Return on Assets (rtnAsts)
+|   |   +-- 5Y Avg Return on Assets (5YrtnAsts)
+|   |   +-- Return on Investment (aroi)
+|   |   +-- 5Y Avg Return on Investment (5Yaroi)
+|   |   +-- ROCE (roce)
+|   |
+|   +-- C. Cash Flow Profitability
+|       +-- Cash Flow Margin (cafCfoaMgn)
+|       +-- 5Y Avg Cash Flow Margin (5YcafCfoaMgn)
+|
++-- 06. GROWTH AND HISTORICAL PERFORMANCE
+|   |
+|   +-- A. Revenue Growth
+|   |   +-- 1Y Historical Revenue Growth (rvng)
+|   |   +-- 5Y Historical Revenue Growth (5YrevChg)
+|   |
+|   +-- B. EBITDA Growth
+|   |   +-- 1Y Historical EBITDA Growth (ebitg)
+|   |   +-- 5Y Historical EBITDA Growth (earnings)
+|   |
+|   +-- C. Earnings Growth
+|   |   +-- 1Y Historical EPS Growth (epsg)
+|   |   +-- 5Y Historical EPS Growth (epsGwth)
+|   |
+|   +-- D. Cash Flow Growth
+|   |   +-- 1Y Historical Operating Cash Flow Growth (cfog)
+|   |   +-- 5Y Historical Operating Cash Flow Growth (cfotr)
+|   |
+|   +-- E. Dividend Growth
+|   |   +-- 3Y Historical Dividend Growth (3YdivGwth)
+|   |
+|   +-- F. Forward Growth Estimates
+|   |   +-- 1Y Forward Revenue Growth (estrvng)
+|   |   +-- 1Y Forward EBITDA Growth (estAvg)
+|   |   +-- 1Y Forward EPS Growth (12mEpsg)
+|   |   +-- 1Y Forward Operating Cash Flow Growth (ecfog)
+|   |
+|   +-- G. General Growth Measures
+|       +-- 5Y CAGR (5yCagrPct)
+|
++-- 07. FINANCIAL HEALTH AND EFFICIENCY
+|   |
+|   +-- A. Liquidity Ratios
+|   |   +-- Current Ratio (qcur)
+|   |   +-- Quick Ratio (aqui)
+|   |
+|   +-- B. Debt and Solvency
+|   |   +-- Debt to Equity (dbtEqt)
+|   |   +-- Long Term Debt to Equity (ldbtEqt)
+|   |   +-- Interest Coverage Ratio (aint)
+|   |   +-- Net Income / Liabilities (netIncByLbl)
+|   |
+|   +-- C. Asset and Working Capital Efficiency
+|   |   +-- Asset Turnover Ratio (asstTurnR)
+|   |   +-- Working Capital Turnover Ratio (wcTurnR)
+|   |   +-- Inventory Turnover Ratio (invTurnR)
+|   |   +-- Cash Conversion Cycle (ccnc)
+|   |
+|   +-- D. Working Capital Days
+|       +-- Days of Inventory Outstanding (daysOfInvOstndng)
+|       +-- Days of Sales Outstanding (daysSalesOstndng)
+|       +-- Days Payable Outstanding (daysPayOstndng)
+|   |
+|   +-- E. Earnings Power
+|       +-- Earning Power (erngPwrR)
+|
++-- 08. VALUATION
+|   |
+|   +-- A. Price-based Valuation
+|   |   +-- PE Ratio (apef)
+|   |   +-- TTM PE Ratio (ttmPe)
+|   |   +-- Forward PE Ratio (pef)
+|   |   +-- PB Ratio (pbr)
+|   |   +-- PS Ratio (ps)
+|   |   +-- Forward PS Ratio (psf)
+|   |   +-- Price / Sales (priceBySales)
+|   |
+|   +-- B. Enterprise Value Multiples
+|   |   +-- Enterprise Value (ev)
+|   |   +-- EV/EBITDA Ratio (evebitd)
+|   |   +-- EV / EBIT Ratio (evebit)
+|   |   +-- EV / Revenue Ratio (evByRev)
+|   |   +-- EV / Invested Capital (evByIc)
+|   |
+|   +-- C. Cash Flow Valuation
+|   |   +-- Price / Free Cash Flow (lcpCafFcf)
+|   |   +-- EV / Free Cash Flow (evCafFcf)
+|   |   +-- Price / CFO (priceCfoR)
+|   |
+|   +-- D. Dividend Valuation
+|   |   +-- Dividend Yield (divDps)
+|   |
+|   +-- E. Sector Benchmark Multiples
+|   |   +-- Sector PE (indpe)
+|   |   +-- Sector PB (indpb)
+|   |   +-- Sector Dividend Yield (inddy)
+|   |
+|   +-- F. Premium / Discount vs Sector
+|   |   +-- PE Premium vs Sector (ped)
+|   |   +-- PB Premium vs Sector (pbd)
+|   |   +-- PS Premium vs Sector (psfs)
+|   |   +-- Dividend Yield vs Sector (divSec)
+|   |
+|   +-- G. Premium / Discount vs Sub-sector
+|       +-- PE Premium vs Sub-sector (pePremSi)
+|       +-- PB Premium vs Sub-sector (pbPremSi)
+|       +-- PS Premium vs Sub-sector (psPremSi)
+|       +-- Dividend Yield vs Sub-sector (dyPremSs)
+|
++-- 09. SHAREHOLDING AND OWNERSHIP
+|   |
+|   +-- A. Promoter Ownership
+|   |   +-- Promoter Holding (strown)
+|   |   +-- Promoter Holding Change – 3M (strown3)
+|   |   +-- Promoter Holding Change – 6M (chPromHldng6M)
+|   |   +-- Pledged Promoter Holdings (promShrPled)
+|   |
+|   +-- B. Domestic Institutional Ownership
+|   |   +-- Domestic Institutional Holding (domInstHldng)
+|   |   +-- DII Holding Change – 3M (domInstHldng3M)
+|   |   +-- DII Holding Change – 6M (domInstHldng6M)
+|   |
+|   +-- C. Foreign Institutional Ownership
+|   |   +-- Foreign Institutional Holding (forInstHldng)
+|   |   +-- FII Holding Change – 3M (forInstHldng3M)
+|   |   +-- FII Holding Change – 6M (forInstHldng6M)
+|   |
+|   +-- D. Mutual Fund Ownership
+|   |   +-- Mutual Fund Holding (instown)
+|   |   +-- MF Holding Change – 3M (instown3)
+|   |   +-- MF Holding Change – 6M (chMutHldng6M)
+|   |
+|   +-- E. Other Investor Ownership
+|   |   +-- Insurance Firms Holding (insHolding)
+|   |   +-- Retail Investor Holding (retailHolding)
+|   |
+|   +-- F. Shareholder Base
+|       +-- Number of Shareholders (nShareholders)
+|
++-- 10. MARKET ACTIVITY AND PRICE PERFORMANCE
+|   |
+|   +-- A. Current Market Price
+|   |   +-- Close Price (lastPrice)
+|   |
+|   +-- B. Historical Returns
+|   |   +-- 1D Return (pr1d)
+|   |   +-- 1W Return (pr1w)
+|   |   +-- 1M Return (4wpct)
+|   |   +-- 6M Return (26wpct)
+|   |   +-- 1Y Return (52wpct)
+|   |
+|   +-- C. Relative Performance vs Nifty
+|   |   +-- 1W Return vs Nifty (pr1wN)
+|   |   +-- 1M Return vs Nifty (4wpctN)
+|   |   +-- 6M Return vs Nifty (6mpctN)
+|   |   +-- 1Y Return vs Nifty (12mpctN)
+|   |
+|   +-- D. Trading Volume
+|   |   +-- Daily Volume (acVol)
+|   |   +-- 1M Average Volume (vol1mAvg)
+|   |   +-- 3M Average Volume (vol3mAvg)
+|   |   +-- 1D Change in Volume (vol1dChPct)
+|   |   +-- 1W Change in Volume (vol1wChPct)
+|   |
+|   +-- E. 52-Week Price Range
+|       +-- % Away From 52W High (52whd)
+|       +-- % Away From 52W Low (52wld)
+|
++-- 11. RISK AND RISK-ADJUSTED PERFORMANCE
+|   |
+|   +-- A. Market Risk
+|   |   +-- Beta (beta)
+|   |   +-- Volatility (12mVol)
+|   |   +-- Volatility vs Nifty (12mVolN)
+|   |
+|   +-- B. Risk-adjusted Returns
+|   |   +-- Alpha (3Ywal)
+|   |   +-- Sharpe Ratio (3Ywsh)
+|   |
+|   +-- C. Drawdown Risk
+|       +-- 1Y Max Loss (maxDrawdown)
+|
++-- 12. TECHNICAL INDICATORS
+|   |
+|   +-- A. Trend and Moving Averages
+|   |   +-- 10D SMA (sma10d)
+|   |   +-- 50D SMA (sma50d)
+|   |   +-- 100D SMA (sma100d)
+|   |   +-- 200D SMA (sma200d)
+|   |   +-- 10D EMA (ema10d)
+|   |   +-- 50D EMA (ema50d)
+|   |   +-- 100D EMA (ema100d)
+|   |   +-- 200D EMA (ema200d)
+|   |   +-- % Price above 1M SMA (pab1Mma)
+|   |   +-- % Price above 1Y SMA (pab12Mma)
+|   |   +-- % Price above 1M EMA (prAvMonthEVA)
+|   |   +-- % From Parabolic SAR (parabolSAR)
+|   |   +-- Super Trend (superTrend)
+|   |
+|   +-- B. Momentum Indicators
+|   |   +-- RSI – 14D (14dRsi)
+|   |   +-- RSI Exponential – 14D (14ersi)
+|   |   +-- Stochastic %K (stochasticK)
+|   |   +-- Stochastic %D (stochasticD)
+|   |   +-- William %R (williamR)
+|   |   +-- MACD Line 1 – Trend Indicator (1mac)
+|   |   +-- MACD Line 2 – Signal Line Comp (2mac)
+|   |
+|   +-- C. Trend Strength
+|   |   +-- ADX Rating – Trend Strength (14adx)
+|   |
+|   +-- D. Volatility Bands
+|   |   +-- % From Upper Bollinger Band (priceUBB)
+|   |   +-- % From Lower Bollinger Band (priceLBB)
+|   |
+|   +-- E. Volume-based Indicators
+|       +-- 1W Change in On Balance Volume (percentChangeObv)
+|       +-- 1W Change in AD Line (percentChangeADL)
+|       +-- VWAP (vWAP)
+|       +-- Relative Volume (relVol)
+|
++-- 13. FUTURES AND OPTIONS (F&O)
+|   |
+|   +-- A. Futures Contract Information
+|   |   +-- Lot Size (ftls)
+|   |   +-- Future Close Price (ftcp)
+|   |   +-- Future Volume (ftvol)
+|   |   +-- Future Open Interest (ftoi)
+|   |
+|   +-- B. Futures Price and Valuation
+|   |   +-- Fair Value (fair)
+|   |   +-- Basis (ftbas)
+|   |   +-- Fair Value Spread (fairsp)
+|   |   +-- Cash & Carry Profit (ccrp)
+|   |
+|   +-- C. Futures Rollover and Spreads
+|   |   +-- Rollover Cost (rolc)
+|   |   +-- Percentage Rollover (rolp)
+|   |   +-- Calendar Spread (csprd)
+|   |
+|   +-- D. Futures Volume and OI Changes
+|   |   +-- 1D Change in Future OI (1Dfoi)
+|   |   +-- 1W Change in Future OI (1Wfoi)
+|   |   +-- 1D Change in Future Volume (1Dvol)
+|   |   +-- 1W Change in Future Volume (1Wvol)
+|   |
+|   +-- E. Options Open Interest
+|   |   +-- Call Open Interest (opcoi)
+|   |   +-- Put Open Interest (oppoi)
+|   |   +-- Put Call Ratio (putcall)
+|   |
+|   +-- F. Options OI Changes
+|   |   +-- 1D Change in Call OI (1Dcoi)
+|   |   +-- 1D Change in Put OI (1DPoi)
+|   |   +-- 1W Change in Call OI (1Wcoi)
+|   |   +-- 1W Change in Put OI (1Wpoi)
+|   |
+|   +-- G. Options Strike Analysis
+|       +-- Highest Call OI Strike (chstr)
+|       +-- Highest Put OI Strike (phstr)
+|       +-- Highest 1D OI Change CE Strike (1Dceoi)
+|       +-- Highest 1D OI Change PE Strike (1Dpeoi)
+|       +-- Highest 1W OI Change CE Strike (1Wceoi)
+|       +-- Highest 1W OI Change PE Strike (1Wpeoi)
+|
++-- 14. ANALYST ESTIMATES AND RECOMMENDATIONS
+|   |
+|   +-- A. Analyst Valuation and Upside
+|   |   +-- Percentage Upside (upside)
+|   |
+|   +-- B. Analyst Recommendations
+|       +-- Percentage Buy Recommendations (breco)
+|       +-- Number of Analysts with Buy Recommendation (nBreco)
+|       +-- Percentage Sell Recommendations (pctSelReco)
+|       +-- Percentage Hold Recommendations (pctHldReco)
+|       +-- Total Number of Analysts (totalAnalysts)
+|
++-- 15. INVESTMENT SCORES AND RANKINGS
+|   |
+|   +-- A. Overall Fundamental Assessment
+|   |   +-- Fundamental Score (fundamental)
+|   |
+|   +-- B. Momentum and Value Rankings
+|   |   +-- Price Momentum Rank (prmr)
+|   |   +-- Value Momentum Rank (valr)
+|   |
+|   +-- C. Earnings and Valuation Quality
+|       +-- Earnings Quality Rank (erqr)
+|       +-- Price to Intrinsic Value Rank (ptir)
+|
++-- 16. INSTITUTIONAL AND INSIDER TRANSACTIONS
+|   |
+|   +-- A. Insider Trading Activity
+|   |   +-- Insider Trades – 1M Cumulative (insiderCml1M)
+|   |   +-- Insider Trades – 3M Cumulative (insiderCml3M)
+|   |   +-- Insider Trades – 6M Cumulative (insiderCml6M)
+|   |
+|   +-- B. Bulk Deal Activity
+|       +-- Bulk Deals – 1M Cumulative (bulkCml1M)
+|       +-- Bulk Deals – 3M Cumulative (bulkCml3M)
+|       +-- Bulk Deals – 6M Cumulative (bulkCml6M)
+|
++-- 17. FUND AND ETF METRICS
+    |
+    +-- A. Fund Expenses
+    |   +-- Expense Ratio (expenseRatio)
+    |
+    +-- B. Tracking Performance
+        +-- Tracking Error (trackErr)
