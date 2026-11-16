@@ -1,0 +1,1041 @@
+A comprehensive product-development and QA specification for an institutional-grade financial charting platform.
+
+The document below is designed to serve as a master testing catalogue for benchmarking against Bloomberg Terminal, Interactive Brokers, LSEG Workspace and FactSet.
+
+# INSTITUTIONAL-GRADE FINANCIAL VISUALIZATION
+
+## Master Testing Catalogue & Benchmarking Specification
+
+**Document purpose:** Financial charting platform development, visualization coverage, QA and competitive benchmarking.
+
+**Benchmark targets:** Bloomberg Terminal, Interactive Brokers, LSEG Workspace, FactSet and other professional financial analytics platforms.
+
+**Scope:** Chart families, chart variations, financial metrics, analytical applications, data combinations, interactions, rendering and performance.
+
+---
+
+# PART 1 — VISUALIZATION LIBRARY
+
+## 1\. Basic Chart Families
+
+1. Line Chart
+2. Multi-Line Chart
+3. Area Chart
+4. Stacked Area Chart
+5. Percentage Stacked Area Chart
+6. Step Line Chart
+7. Bar Chart
+8. Horizontal Bar Chart
+9. Grouped Bar Chart
+10. Stacked Bar Chart
+11. Percentage Stacked Bar Chart
+12. Diverging Bar Chart
+13. Floating Bar Chart
+14. Waterfall Chart
+15. Bridge Chart
+16. Combo Chart
+17. Dual-Axis Chart
+18. Multi-Axis Chart
+19. Small Multiples
+20. Quarterly Small Multiples
+21. Monthly Small Multiples
+22. Sparkline
+23. Slope Chart
+24. Dumbbell Chart
+25. Lollipop Chart
+26. Dot Plot
+27. Dot Strip Plot
+28. Arrow Chart
+29. Bump Chart
+30. Bullet Chart
+31. Scorecard
+32. Marimekko Chart
+33. Waffle Chart
+34. Pareto Chart
+35. Calendar Chart
+
+## 2\. Financial Flow and Composition
+
+36. Sankey Diagram
+37. Alluvial Diagram
+38. Streamgraph
+39. Treemap
+40. Sunburst Chart
+41. Icicle Chart
+42. Circle Packing Chart
+43. Voronoi Treemap
+44. Chord Diagram
+45. Parallel Sets Diagram
+46. Network Graph
+47. Contribution Analysis Chart
+48. Revenue Composition Chart
+49. Expense Breakdown Chart
+50. Asset Composition Chart
+51. Liability Composition Chart
+52. Equity Composition Chart
+53. Ownership Composition Chart
+54. Capital Allocation Chart
+55. Sources and Uses of Capital Chart
+
+## 3\. Statistical and Distribution Charts
+
+56. Histogram
+57. Density Plot
+58. Kernel Density Estimate
+59. Box Plot
+60. Violin Plot
+61. Beeswarm Plot
+62. Ridgeline Plot
+63. Strip Plot
+64. ECDF Plot
+65. Q-Q Plot
+66. Probability Distribution Plot
+67. Cumulative Distribution Plot
+68. Return Distribution Histogram
+69. Tail Risk Distribution
+70. Frequency Distribution Chart
+71. Hexbin Plot
+72. Contour Plot
+73. Bubble Scatter Plot
+74. Scatter Plot
+75. Scatterplot Matrix
+76. Correlation Matrix
+77. Covariance Matrix Heatmap
+78. Bubble Matrix
+79. Density Scatter Plot
+80. 3D Scatter Plot
+81. 3D Surface Plot
+
+## 4\. Time-Series Charts
+
+82. Indexed Line Chart
+83. Indexed Area Chart
+84. Rolling Return Chart
+85. Rolling Growth Chart
+86. Rolling Volatility Chart
+87. Rolling Correlation Chart
+88. Rolling Beta Chart
+89. Cumulative Return Chart
+90. Horizon Chart
+91. Calendar Heatmap
+92. Seasonality Heatmap
+93. Time-Series Heatmap
+94. Historical vs Forecast Chart
+95. Forecast vs Actual Chart
+96. Forecast Cone Chart
+97. Fan Chart
+98. Confidence Interval Chart
+99. Event Timeline
+100. Regime Change Chart
+101. Change Point Visualization
+102. Trend Decomposition Chart
+103. Seasonal Decomposition Chart
+
+## 5\. Valuation Charts
+
+104. Valuation Bands Chart
+105. Historical Valuation Percentile Chart
+106. Valuation Football Field
+107. Valuation Multiples Comparison
+108. Valuation Distribution Chart
+109. Peer Valuation Scatter Plot
+110. P/E vs Growth Scatter Plot
+111. EV/EBITDA Distribution
+112. Valuation Heatmap
+113. Relative Valuation Ranking
+114. Valuation Sensitivity Matrix
+115. Tornado Chart
+116. Reverse DCF Sensitivity Chart
+117. Valuation Bridge
+118. Historical Multiple Trend
+119. Forward vs Trailing Multiple Chart
+120. Valuation Premium/Discount Chart
+121. Intrinsic Value vs Market Price Chart
+122. Enterprise Value Bridge
+
+## 6\. Profitability and Efficiency Charts
+
+123. Margin Trend Chart
+124. Margin Decomposition Chart
+125. Margin Waterfall
+126. DuPont Analysis Chart
+127. ROE Decomposition Chart
+128. ROCE Trend Chart
+129. ROA vs ROE Scatter Plot
+130. Operating Leverage Chart
+131. Incremental Margin Chart
+132. Efficiency Frontier
+133. Profit per Employee Chart
+134. Return on Capital Comparison
+135. Profitability Heatmap
+136. Profitability Scorecard
+137. Earnings Quality Chart
+138. Incremental ROIC Chart
+139. Unit Economics Chart
+
+## 7\. Balance Sheet and Liquidity Charts
+
+140. Working Capital Trend
+141. Working Capital Cycle
+142. Receivables Aging
+143. Inventory Aging
+144. Debt Maturity Profile
+145. Net Debt Bridge
+146. Debt-to-Equity Trend
+147. Current Ratio vs Quick Ratio
+148. Interest Coverage Trend
+149. Liquidity Coverage Chart
+150. Asset Turnover Chart
+151. Asset Composition Treemap
+152. Liability Composition Chart
+153. Sources and Uses of Capital
+154. Debt Service Coverage Chart
+155. Solvency Ratio Comparison
+156. Financial Stability Matrix
+157. Altman Z-Score Trend
+158. Piotroski F-Score Chart
+
+## 8\. Cash Flow Charts
+
+159. Cash Flow Waterfall
+160. Operating Cash Flow Trend
+161. Investing Cash Flow Trend
+162. Financing Cash Flow Trend
+163. Free Cash Flow Trend
+164. Cash Flow Conversion
+165. Operating Cash Flow vs Net Profit
+166. CapEx vs Depreciation
+167. Cash Burn Rate
+168. Cash Conversion Ratio
+169. Cash Conversion Cycle
+170. Dividend Payout Chart
+171. Share Buyback Chart
+172. Retained Earnings Bridge
+173. Capital Allocation Chart
+174. Cash Flow Quality Chart
+
+## 9\. Market Activity and Technical Charts
+
+175. Candlestick Chart
+176. OHLC Chart
+177. Heikin-Ashi Chart
+178. Hollow Candlestick Chart
+179. Renko Chart
+180. Point and Figure Chart
+181. Kagi Chart
+182. Equivolume Chart
+183. Volume Profile
+184. Volume Delta
+185. Cumulative Volume Delta
+186. VWAP Chart
+187. Anchored VWAP
+188. Moving Average Ribbon
+189. Relative Strength Chart
+190. Market Profile / TPO
+191. Price Distribution Profile
+192. Gap Analysis Chart
+193. Ichimoku Cloud
+194. Supertrend
+195. Zigzag Chart
+196. Donchian Channel
+197. Keltner Channel
+198. Bollinger Bands
+199. Parabolic SAR
+200. Regression Channel
+201. Fibonacci Retracement Overlay
+202. Fibonacci Extension Overlay
+203. Andrews Pitchfork
+204. Gann Fan
+205. Darvas Box
+206. Elliott Wave Annotation
+
+## 10\. Risk and Portfolio Charts
+
+207. Risk-Return Scatter Plot
+208. Underwater Plot
+209. Drawdown Chart
+210. Portfolio Efficient Frontier
+211. Capital Allocation Line
+212. Portfolio Performance Attribution
+213. Portfolio Risk Decomposition
+214. Factor Exposure Chart
+215. Factor Contribution Chart
+216. Asset Allocation Treemap
+217. Portfolio Correlation Network
+218. Sector Allocation Heatmap
+219. Tracking Error Chart
+220. Active Share Chart
+221. Risk Budget Chart
+222. Value at Risk Chart
+223. Expected Shortfall Chart
+224. Monte Carlo Simulation Chart
+225. Stress Testing Chart
+226. Scenario Analysis Chart
+227. Rolling Sharpe Ratio
+228. Rolling Sortino Ratio
+229. Risk Contribution Chart
+230. Portfolio Drawdown Comparison
+
+## 11\. Derivatives and Options Charts
+
+231. Options Payoff Diagram
+232. Options P&L Profile
+233. Implied Volatility Smile
+234. Implied Volatility Skew
+235. Implied Volatility Surface
+236. Volatility Term Structure
+237. Greeks Sensitivity Chart
+238. Delta Exposure Chart
+239. Gamma Exposure Chart
+240. Open Interest Profile
+241. Options Volume Profile
+242. Put-Call Ratio Trend
+243. Max Pain Chart
+244. Expiration Payoff Matrix
+245. Scenario P&L Surface
+246. Options Probability Distribution
+247. Gamma Exposure by Strike
+248. Delta Exposure by Strike
+249. Open Interest Heatmap
+250. Volatility Risk Premium Chart
+
+## 12\. Fixed Income and Credit Charts
+
+251. Yield Curve
+252. Yield Curve Evolution
+253. Yield Spread Chart
+254. Credit Spread Chart
+255. Credit Spread Distribution
+256. Bond Price-Yield Curve
+257. Duration-Convexity Chart
+258. Bond Ladder Chart
+259. Credit Rating Migration Matrix
+260. Default Probability Curve
+261. CDS Spread Chart
+262. Sovereign Yield Comparison
+263. Forward Rate Curve
+264. Term Structure Chart
+265. Bond Total Return Chart
+266. Real vs Nominal Yield Chart
+
+## 13\. Market Microstructure and Order Flow
+
+267. Market Depth Heatmap
+268. Level II Order Book
+269. Bid-Ask Spread Chart
+270. Order Book Imbalance
+271. Time and Sales Visualization
+272. Footprint Chart
+273. Cluster Chart
+274. Volume-at-Price Chart
+275. Liquidity Heatmap
+276. Order Flow Imbalance
+277. Trade Size Distribution
+278. Bid-Ask Volume Distribution
+279. Order Book Pressure Chart
+280. Trade Execution Analysis Chart
+
+## 14\. Macroeconomic and Cross-Asset Charts
+
+281. Economic Surprise Index
+282. Inflation Trend Chart
+283. Interest Rate Expectations Curve
+284. GDP Growth Comparison
+285. Unemployment Trend
+286. PMI Diffusion Index
+287. Macro Indicator Dashboard
+288. Leading vs Lagging Indicators
+289. Recession Probability Chart
+290. Central Bank Rate Path
+291. Commodity Futures Curve
+292. Currency Strength Matrix
+293. Cross-Asset Correlation Matrix
+294. Global Market Performance Map
+295. Economic Cycle Visualization
+296. Macro Regime Heatmap
+
+---
+
+# PART 2 — FINANCIAL METRIC TESTING CATALOGUE
+
+Every metric should be evaluated against all relevant chart types rather than blindly using every chart for every metric.
+
+## 15\. Revenue Metrics
+
+- Total Revenue
+- Revenue Growth
+- Revenue CAGR
+- Quarterly Revenue
+- Annual Revenue
+- Segment Revenue
+- Geographic Revenue
+- Product Revenue
+- Revenue per Customer
+- Revenue per Employee
+- Revenue Concentration
+- Recurring Revenue
+- Revenue Backlog
+- Organic Revenue Growth
+- Revenue Contribution
+
+## 16\. Earnings Metrics
+
+- Gross Profit
+- EBITDA
+- EBIT
+- Operating Profit
+- Net Profit
+- Adjusted EBITDA
+- EPS
+- Diluted EPS
+- Basic EPS
+- EPS Growth
+- EPS CAGR
+- Earnings Per Share Forecast
+- Earnings Surprise
+- Earnings Quality
+- Earnings Persistence
+
+## 17\. Margin Metrics
+
+- Gross Margin
+- EBITDA Margin
+- EBIT Margin
+- Operating Margin
+- Net Profit Margin
+- Contribution Margin
+- Incremental Margin
+- Free Cash Flow Margin
+- Cash Operating Margin
+- Return on Sales
+
+## 18\. Return and Efficiency Metrics
+
+- ROE
+- ROCE
+- ROA
+- ROIC
+- ROI
+- Asset Turnover
+- Inventory Turnover
+- Receivables Turnover
+- Payables Turnover
+- Fixed Asset Turnover
+- Capital Employed
+- Working Capital Turnover
+- Cash Conversion Cycle
+
+## 19\. Balance Sheet Metrics
+
+- Total Assets
+- Current Assets
+- Non-Current Assets
+- Total Liabilities
+- Current Liabilities
+- Long-Term Liabilities
+- Shareholders' Equity
+- Retained Earnings
+- Net Worth
+- Tangible Net Worth
+- Working Capital
+- Net Working Capital
+- Net Debt
+- Gross Debt
+- Cash and Equivalents
+
+## 20\. Liquidity and Solvency Metrics
+
+- Current Ratio
+- Quick Ratio
+- Cash Ratio
+- Debt-to-Equity
+- Debt-to-Assets
+- Net Debt-to-EBITDA
+- Interest Coverage
+- Debt Service Coverage
+- Equity Multiplier
+- Financial Leverage
+- Altman Z-Score
+- Piotroski F-Score
+
+## 21\. Cash Flow Metrics
+
+- Operating Cash Flow
+- Investing Cash Flow
+- Financing Cash Flow
+- Free Cash Flow
+- Free Cash Flow Yield
+- Cash Flow per Share
+- Cash Conversion Ratio
+- Operating Cash Flow to Net Income
+- CapEx
+- CapEx to Sales
+- CapEx to Depreciation
+- Dividend Cash Flow
+- Cash Burn Rate
+- Cash Runway
+
+## 22\. Valuation Metrics
+
+- Market Capitalization
+- Enterprise Value
+- Price-to-Earnings
+- Forward P/E
+- Price-to-Book
+- Price-to-Sales
+- Price-to-Cash Flow
+- EV/EBITDA
+- EV/EBIT
+- EV/Sales
+- EV/FCF
+- PEG Ratio
+- Dividend Yield
+- Earnings Yield
+- Free Cash Flow Yield
+- Price-to-Growth
+- Intrinsic Value
+- Margin of Safety
+
+## 23\. Growth Metrics
+
+- Revenue Growth
+- EBITDA Growth
+- EBIT Growth
+- Net Profit Growth
+- EPS Growth
+- FCF Growth
+- Asset Growth
+- Equity Growth
+- Dividend Growth
+- CAGR
+- Organic Growth
+- Forward Growth
+- Consensus Growth
+- Growth Acceleration
+- Growth Deceleration
+
+## 24\. Market Metrics
+
+- Share Price
+- Trading Volume
+- Turnover
+- Market Capitalization
+- Relative Strength
+- Beta
+- Alpha
+- Volatility
+- Average True Range
+- Moving Average
+- RSI
+- MACD
+- ADX
+- Stochastic Oscillator
+- OBV
+- VWAP
+- Bid-Ask Spread
+- Market Depth
+- Delivery Volume
+- Short Interest
+
+## 25\. Risk Metrics
+
+- Standard Deviation
+- Historical Volatility
+- Implied Volatility
+- Beta
+- Alpha
+- Maximum Drawdown
+- Average Drawdown
+- Value at Risk
+- Expected Shortfall
+- Sharpe Ratio
+- Sortino Ratio
+- Calmar Ratio
+- Treynor Ratio
+- Tracking Error
+- Information Ratio
+- Downside Deviation
+- Skewness
+- Kurtosis
+- Correlation
+- Tail Risk
+
+---
+
+# PART 3 — METRIC-TO-CHART COMPATIBILITY TESTING
+
+For every financial metric, maintain a chart compatibility record.
+
+Example:
+
+**Metric: EBITDA Margin**
+
+Applicable visualization tests:
+
+1. Line Chart
+2. Area Chart
+3. Indexed Line Chart
+4. Slope Chart
+5. Small Multiples
+6. Quarterly Small Multiples
+7. Box Plot
+8. Violin Plot
+9. Beeswarm Plot
+10. Histogram
+11. Density Plot
+12. Heatmap
+13. Bullet Chart
+14. Dumbbell Chart
+15. Peer Comparison Scatter Plot
+16. Margin Waterfall
+17. Margin Decomposition Chart
+18. Forecast Band Chart
+19. Rolling Trend Chart
+20. Growth Contribution Chart
+
+**Metric: ROCE**
+
+Applicable visualization tests:
+
+1. Line Chart
+2. Area Chart
+3. Indexed Line Chart
+4. Slope Chart
+5. Small Multiples
+6. Radar Chart
+7. Bullet Chart
+8. Box Plot
+9. Violin Plot
+10. Beeswarm Plot
+11. Peer Comparison Scatter Plot
+12. ROCE vs ROE Scatter Plot
+13. ROCE Heatmap
+14. ROCE Decomposition
+15. Rolling ROCE Chart
+16. ROCE Distribution
+17. Forecast ROCE Chart
+18. ROCE Ranking Chart
+
+**Metric: P/E Ratio**
+
+Applicable visualization tests:
+
+1. Historical Line Chart
+2. Historical Valuation Bands
+3. Indexed Valuation Chart
+4. Box Plot
+5. Violin Plot
+6. Histogram
+7. Density Plot
+8. Beeswarm Plot
+9. Peer Comparison Scatter Plot
+10. Valuation Heatmap
+11. Valuation Percentile Chart
+12. Forward vs Trailing P/E
+13. P/E vs Growth Scatter Plot
+14. P/E vs ROE Scatter Plot
+15. Valuation Football Field
+16. Valuation Sensitivity Matrix
+17. Historical Multiple Distribution
+18. Sector Ranking Chart
+
+**Metric: Free Cash Flow**
+
+Applicable visualization tests:
+
+1. Line Chart
+2. Area Chart
+3. Stacked Area Chart
+4. Waterfall Chart
+5. Cash Flow Bridge
+6. Indexed Line Chart
+7. Rolling FCF Chart
+8. FCF Margin Chart
+9. FCF Yield Chart
+10. Histogram
+11. Box Plot
+12. Peer Comparison
+13. FCF vs Net Profit Scatter Plot
+14. FCF Conversion Chart
+15. FCF Forecast Band
+16. FCF Contribution Chart
+
+Repeat this process for every metric in Part 2.
+
+---
+
+# PART 4 — DATA DIMENSION TESTING
+
+Each applicable visualization should be tested with:
+
+## 26\. Time Dimensions
+
+- Daily
+- Weekly
+- Monthly
+- Quarterly
+- Half-Yearly
+- Annual
+- Financial Year
+- Calendar Year
+- Trailing Twelve Months
+- Year-to-Date
+- Month-to-Date
+- Quarter-to-Date
+- Custom Rolling Period
+- Intraday
+- Tick-by-Tick
+
+## 27\. Comparison Dimensions
+
+- Single Company
+- Two Companies
+- Multiple Companies
+- Sector Comparison
+- Industry Comparison
+- Sub-Sector Comparison
+- Benchmark Comparison
+- Market Index Comparison
+- Domestic vs Global Comparison
+- Historical Self-Comparison
+- Peer Median Comparison
+- Peer Average Comparison
+- Best-in-Class Comparison
+- Custom Watchlist Comparison
+
+## 28\. Data Conditions
+
+- Positive Values
+- Negative Values
+- Zero Values
+- Mixed Positive and Negative Values
+- Missing Values
+- Null Values
+- Outliers
+- Extreme Values
+- Highly Skewed Data
+- Sparse Data
+- Dense Data
+- Irregular Time Intervals
+- Restated Financial Data
+- Discontinued Operations
+- Corporate Actions
+- Currency Conversion
+- Inflation-Adjusted Data
+- Split-Adjusted Data
+
+---
+
+# PART 5 — INTERACTIVE CHART TESTING
+
+## 29\. Chart Interaction
+
+- Mouse Hover
+- Dynamic Tooltip
+- Crosshair
+- Vertical Crosshair
+- Horizontal Crosshair
+- Zoom In
+- Zoom Out
+- Pan
+- Drag to Select
+- Range Selection
+- Scroll Zoom
+- Double-Click Reset
+- Chart Synchronization
+- Linked Crosshair
+- Linked Time Axis
+- Multi-Chart Selection
+- Chart Comparison
+- Data Point Highlighting
+- Data Point Selection
+- Context Menu
+- Full-Screen Mode
+
+## 30\. Analytical Interactions
+
+- Add Technical Indicator
+- Remove Indicator
+- Edit Indicator Parameters
+- Add Moving Average
+- Add Benchmark
+- Add Peer Company
+- Change Time Interval
+- Change Chart Type
+- Change Currency
+- Change Scale
+- Toggle Logarithmic Scale
+- Toggle Percentage Scale
+- Toggle Adjusted/Unadjusted Prices
+- Toggle Annual/Quarterly Data
+- Overlay Forecasts
+- Overlay Historical Averages
+- Add Target Values
+- Add Thresholds
+- Add Custom Formulas
+- Create Custom Ratios
+- Add Annotations
+- Add Trendlines
+- Add Horizontal Lines
+- Add Vertical Lines
+- Add Support and Resistance
+- Save Chart Template
+- Duplicate Chart
+- Compare Chart Templates
+
+## 31\. Dashboard Interactions
+
+- Multi-Chart Dashboard
+- Drag-and-Drop Layout
+- Resizable Panels
+- Linked Filters
+- Global Date Selector
+- Global Company Selector
+- Global Benchmark Selector
+- Custom Watchlists
+- Custom Chart Groups
+- Save Workspace
+- Restore Workspace
+- Multiple Workspaces
+- Persistent Settings
+- Chart Sharing
+- Dashboard Sharing
+- Export Dashboard
+
+---
+
+# PART 6 — VISUAL QUALITY AND RENDERING TESTS
+
+## 32\. Visual Rendering
+
+- Responsive Chart Layout
+- High-DPI Rendering
+- Retina Display Support
+- Dark Theme
+- Light Theme
+- Custom Color Themes
+- Color-Blind-Friendly Palettes
+- Automatic Axis Scaling
+- Automatic Tick Formatting
+- Currency Formatting
+- Percentage Formatting
+- Large Number Formatting
+- Negative Number Formatting
+- Financial Year Labels
+- Time Zone Handling
+- Dense Data Label Management
+- Legend Positioning
+- Dynamic Legend
+- Multiple Axis Labels
+- Gridline Customization
+- Reference Lines
+- Threshold Bands
+- Annotations
+- Watermarks
+
+## 33\. Export and Reporting
+
+- PNG Export
+- JPEG Export
+- SVG Export
+- PDF Export
+- CSV Export
+- Excel Export
+- Copy Chart as Image
+- Copy Data
+- Download Underlying Data
+- Print-Optimized Layout
+- High-Resolution Export
+- Bulk Chart Export
+- Export Dashboard
+- Scheduled Reports
+- Automated Chart Snapshots
+
+---
+
+# PART 7 — PERFORMANCE AND RELIABILITY
+
+## 34\. Performance Tests
+
+- Initial Chart Rendering Time
+- Large Dataset Rendering
+- Real-Time Data Updates
+- Streaming Data
+- High-Frequency Data
+- Multiple Simultaneous Charts
+- Multi-Symbol Rendering
+- Memory Consumption
+- CPU Utilization
+- GPU Acceleration
+- WebSocket Data Updates
+- Chart Refresh Latency
+- Interaction Latency
+- Browser Responsiveness
+- Long Session Stability
+- Data Aggregation Performance
+- Downsampling Accuracy
+- Rendering Consistency
+
+## 35\. Data Integrity Tests
+
+- Missing Data Handling
+- Duplicate Data Handling
+- Incorrect Timestamp Handling
+- Currency Mismatch
+- Corporate Action Adjustments
+- Split Adjustments
+- Dividend Adjustments
+- Restated Financial Statements
+- Historical Data Corrections
+- Financial Year Alignment
+- Time Zone Alignment
+- Outlier Detection
+- Data Source Comparison
+- Real-Time vs Historical Reconciliation
+
+---
+
+# PART 8 — STANDARDIZED QA TEST CASE FORMAT
+
+Every chart and metric combination should have an individual test record.
+
+Required fields:
+
+1. Test ID
+2. Visualization Name
+3. Visualization Family
+4. Metric Name
+5. Financial Category
+6. Data Frequency
+7. Data Source
+8. Data Volume
+9. Comparison Mode
+10. Chart Configuration
+11. Expected Output
+12. Actual Output
+13. Rendering Accuracy
+14. Tooltip Accuracy
+15. Interaction Accuracy
+16. Axis Accuracy
+17. Data Integrity
+18. Performance Result
+19. Responsive Behaviour
+20. Export Result
+21. Browser Compatibility
+22. Pass/Fail Status
+23. Defect Reference
+24. Notes
+
+Suggested QA status:
+
+- Not Tested
+- In Progress
+- Passed
+- Failed
+- Partially Supported
+- Not Applicable
+
+---
+
+# PART 9 — COMPETITIVE BENCHMARKING
+
+Benchmark the platform against:
+
+1. Bloomberg Terminal
+2. Interactive Brokers Trader Workstation
+3. LSEG Workspace
+4. FactSet
+5. Refinitiv Eikon (legacy reference)
+6. TradingView
+7. Koyfin
+8. Capital IQ Pro
+9. Morningstar Direct
+10. thinkorswim
+11. MetaTrader 5
+12. NinjaTrader
+13. TrendSpider
+14. StockCharts
+15. YCharts
+
+Compare the following capabilities:
+
+- Chart Variety
+- Chart Customization
+- Fundamental Analytics
+- Technical Indicators
+- Peer Comparisons
+- Portfolio Analytics
+- Derivatives Analytics
+- Fixed Income Analytics
+- Macroeconomic Analytics
+- Real-Time Data
+- Historical Data
+- Multi-Asset Support
+- Statistical Analysis
+- Forecasting
+- Scenario Analysis
+- Dashboard Flexibility
+- Interactive Features
+- Data Export
+- Rendering Performance
+- Workspace Management
+
+Record actual product availability and licensing requirements separately. Do not assume every platform supports every feature.
+
+---
+
+# PART 10 — COMPLETION CRITERIA
+
+The visualization platform should not be considered complete merely because all chart types have been implemented.
+
+Completion requires:
+
+1. All relevant visualization families catalogued.
+2. All meaningful chart variations identified.
+3. All financial metrics mapped to suitable visualizations.
+4. All applicable time frequencies tested.
+5. Single-company and peer comparison tested.
+6. Positive, negative, missing and extreme data tested.
+7. Forecasting and statistical use cases tested.
+8. Interactive functionality tested.
+9. Rendering performance benchmarked.
+10. Data integrity verified.
+11. Export functionality verified.
+12. Responsive layouts verified.
+13. Competitive feature comparison documented.
+14. Chart accuracy reviewed by financial domain experts.
+
+---
+
+# FINAL OBJECTIVE
+
+Build a professional financial visualization platform that allows users to:
+
+- Analyse any listed company's financial statements.
+- Compare any financial metric across historical periods.
+- Compare companies, sectors and benchmarks.
+- Analyse valuation and profitability.
+- Examine cash flow and balance sheet quality.
+- Visualize technical and market data.
+- Explore options, derivatives and fixed income.
+- Analyse portfolio performance and risk.
+- Model forecasts and alternative scenarios.
+- Build customizable institutional-grade dashboards.
+
+**Core principle:**
+
+Do not maximize the number of chart types. Maximize the analytical coverage of every financial metric.
+
+Every visualization should be tested for correctness, interpretability, performance and usefulness in the financial decision-making process.
+
+**END OF MASTER SPECIFICATION**
+
+## How I recommend implementing this
+
+I would use this document as the master specification and create three working databases from it:
+
+1. Visualization Registry: One record per chart type and variation.
+2. Metric Compatibility Matrix: Every metric mapped to appropriate charts, with supported and unsupported combinations.
+3. QA Execution Registry: Every chart-metric-data combination tested, with screenshots, results and defects.
+
+One important distinction: this is a comprehensive testing blueprint, not a claim that every conceivable financial visualization has been enumerated. Specialized instruments and proprietary terminal features will require further additions as your platform develops.
