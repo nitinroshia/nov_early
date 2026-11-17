@@ -1,0 +1,201 @@
+vendor_code	reference_label	canonical_field	canonical_label
+12mEpsg	1Y Forward EPS Growth	consensus_eps_growth_12m	Consensus EPS growth, next 12 months
+12mVol	Volatility	volatility	Annualised volatility
+12mVolN	Volatility vs Nifty	relative_volatility	Volatility relative to benchmark
+12mpctN	1Y Return vs Nifty	relative_return	Return minus benchmark return over window
+26wpct	6M Return	price_return	Price return over window
+3YdivGwth	3Y Historical Dividend Growth	dividend_per_share_cagr_3y	Dividend per share CAGR, 3 years
+3Ywal	Alpha	jensens_alpha	Jensen's alpha (annualised)
+3Ywsh	Sharpe Ratio	sharpe_ratio	Sharpe ratio
+3mAvgVol	ABSENT	avg_volume	Average daily volume over window
+4wpct	1M Return	price_return	Price return over window
+4wpctN	1M Return vs Nifty	relative_return	Return minus benchmark return over window
+52wHigh	ABSENT	high_52w	52-week high
+52wLow	ABSENT	low_52w	52-week low
+52whd	% Away From 52W High	pct_from_52w_high	Distance from 52-week high
+52wld	% Away From 52W Low	pct_from_52w_low	Distance from 52-week low
+52wpct	1Y Return	price_return	Price return over window
+5Yaroi	5Y Avg Return on Investment	return_on_invested_capital_avg_5y	Return on invested capital, 5-year mean
+5YcafCfoaMgn	5Y Avg Cash Flow Margin	operating_cash_flow_margin_avg_5y	Operating cash flow margin, 5-year mean
+5YpftMrg	5Y Avg Net Profit Margin	net_profit_margin_avg_5y	Net profit margin, 5-year mean
+5YrevChg	5Y Historical Revenue Growth	revenue_cagr_5y	Revenue CAGR, 5 years
+5Yroe	5Y Avg Return on Equity	return_on_equity_avg_5y	Return on equity, 5-year mean
+5YrtnAsts	5Y Avg Return on Assets	return_on_assets_avg_5y	Return on assets, 5-year mean
+5yCagrPct	5Y CAGR	price_cagr	Annualised price return over window
+6mpctN	6M Return vs Nifty	relative_return	Return minus benchmark return over window
+aint	Interest Coverage Ratio	interest_coverage_ratio	Interest coverage (EBIT / interest expense)
+aopm	EBITDA Margin	ebitda_margin	EBITDA margin
+apef	PE Ratio	pe_last_fy	P/E on last fiscal-year EPS
+aqui	Quick Ratio	quick_ratio	Quick ratio
+aroi	Return on Investment	return_on_invested_capital	Return on invested capital
+asstTurnR	Asset Turnover Ratio	asset_turnover	Asset turnover
+balAccp	Accounts Payable	trade_payables	Trade payables
+balApic	Additional Paid-in Capital	additional_paid_in_capital	Additional paid-in capital
+balCa	ABSENT	total_current_assets	Total current assets
+balCogs	Cost of Goods Sold	cost_of_goods_sold	Cost of goods sold (explicit definition)
+balComs	Share Capital	share_capital	Share capital
+balCsti	Cash and Equivalent	cash_and_equivalents	Cash and equivalents (incl. short-term investments)
+balDit	Deferred Tax Liabilities (Net)	deferred_tax_liabilities	Deferred tax liabilities
+balDta	Deferred Tax Assets (Net)	deferred_tax_assets	Deferred tax assets
+balGint	Goodwill & Intangibles	goodwill_and_intangibles	Goodwill and intangible assets
+balLti	Long Term Investments	long_term_investments	Long-term investments
+balMint	Minority Interest	minority_interest	Non-controlling interest
+balNca	Non Current Assets	total_non_current_assets	Total non-current assets
+balNcl	Non Current Liabilities	total_non_current_liabilities	Total non-current liabilities
+balNetl	Loans & Advances	net_advances	Net advances (loans)
+balNppe	Net Property, Plant & Equipment	net_ppe	Net property, plant and equipment
+balOca	Other Current Assets	other_current_assets	Other current assets
+balOeq	ABSENT	other_equity	Other equity
+balOtha	Other Assets	other_non_current_assets	Other non-current assets
+balOthl	Other Liabilities	other_non_current_liabilities	Other non-current liabilities
+balRtne	Reserves & Surplus	retained_earnings_and_reserves	Retained earnings and reserves
+balTca	Total Current Assets	total_current_assets	Total current assets
+balTcl	Total Current Liabilities	total_current_liabilities	Total current liabilities
+balTcso	Common Shares Outstanding	shares_outstanding	Shares outstanding (period end)
+balTdeb	Total Debt	total_debt	Total debt (gross)
+balTdep	Total Deposits – Banks	total_deposits	Total deposits
+balTeq	Total Equity	total_equity	Total equity (incl. non-controlling interest)
+balTinv	Total Inventory	inventories	Inventories
+balTlse	ABSENT	total_liabilities_and_equity	Total liabilities and equity
+balTltd	Long Term Debt	long_term_debt	Long-term debt
+balTota	Total Assets	total_assets	Total assets
+balTotl	Total Liabilities	total_liabilities	Total liabilities
+balTpso	ABSENT	preferred_shares_outstanding	Preferred shares outstanding
+balTrec	Total Receivables	trade_receivables	Trade receivables
+beta	Beta	beta	Beta vs benchmark
+bookValue	Book Value	book_value_per_share	Book value per share (owners' equity)
+bps	ABSENT	book_value_per_share	Book value per share (owners' equity)
+breco	Percentage Buy Recommendations	analyst_buy_pct	Share of buy recommendations
+cafCexp	Capital Expenditure	capital_expenditure	Capital expenditure
+cafCffa	Financing Cash Flow	cash_flow_from_financing	Cash flow from financing
+cafCfia	Investing Cash Flow	cash_flow_from_investing	Cash flow from investing
+cafCfoa	Operating Cash Flow	cash_flow_from_operations	Cash flow from operations
+cafCfoaMgn	Cash Flow Margin	operating_cash_flow_margin	Operating cash flow margin
+cafCiwc	Change in Working Capital	change_in_working_capital	Cash effect of change in working capital
+cafFcf	Free Cash Flow	free_cash_flow	Free cash flow
+cafFee	ABSENT	fx_effect_on_cash	Effect of exchange rates on cash
+cafNcic	Net Change in Cash	net_change_in_cash	Net change in cash
+cafTcdp	Total Cash Dividend Paid	dividends_paid	Dividends paid
+ccnc	Cash Conversion Cycle	cash_conversion_cycle	Cash conversion cycle
+cfog	1Y Historical Operating Cash Flow Growth	operating_cash_flow_growth_yoy	Operating cash flow growth, YoY
+cfotr	5Y Historical Operating Cash Flow Growth	operating_cash_flow_cagr_5y	Operating cash flow CAGR, 5 years
+chMutHldng6M	MF Holding Change – 6M	mutual_fund_holding_chg_2q	Mutual fund holding, change vs 2 quarters ago
+chPromHldng6M	Promoter Holding Change – 6M	promoter_holding_chg_2q	Promoter holding, change vs 2 quarters ago
+daysOfInvOstndng	Days of Inventory Outstanding	days_inventory_outstanding	Days inventory outstanding
+daysPayOstndng	Days Payable Outstanding	days_payables_outstanding	Days payables outstanding
+daysSalesOstndng	Days of Sales Outstanding	days_sales_outstanding	Days sales outstanding
+dbtEqt	Debt to Equity	debt_to_equity	Debt to equity
+divDps	Dividend Yield	dividend_yield	Dividend yield
+divSec	Dividend Yield vs Sector	dividend_yield_spread_to_group	Dividend yield spread to group
+divYield	ABSENT	dividend_yield	Dividend yield
+domInstHldng	Domestic Institutional Holding	domestic_institutional_holding	Domestic institutional holding
+domInstHldng3M	DII Holding Change – 3M	domestic_institutional_holding_chg_1q	Domestic institutional holding, change vs 1 quarter ago
+domInstHldng6M	DII Holding Change – 6M	domestic_institutional_holding_chg_2q	Domestic institutional holding, change vs 2 quarters ago
+dyPremSs	Dividend Yield vs Sub-sector	dividend_yield_spread_to_group	Dividend yield spread to group
+earnings	5Y Historical EBITDA Growth	ebitda_cagr_5y	EBITDA CAGR, 5 years
+ebitg	1Y Historical EBITDA Growth	ebitda_growth_yoy	EBITDA growth, YoY
+ecfog	1Y Forward Operating Cash Flow Growth	consensus_operating_cash_flow_growth	Consensus operating cash flow growth
+eps	ABSENT	eps_ttm	EPS, trailing twelve months
+epsGwth	5Y Historical EPS Growth	eps_cagr_5y	EPS CAGR, 5 years
+epsg	1Y Historical EPS Growth	eps_growth_yoy	EPS growth, YoY
+erngPwrR	Earning Power	basic_earning_power	Basic earning power
+estAvg	1Y Forward EBITDA Growth	consensus_ebitda_growth_12m	Consensus EBITDA growth, next 12 months
+estGrowth	ABSENT	assumed_forward_growth	Growth assumed for forward multiples
+estrvng	1Y Forward Revenue Growth	consensus_revenue_growth	Consensus revenue growth (forward)
+ev	Enterprise Value	enterprise_value	Enterprise value
+evByIc	EV / Invested Capital	ev_to_invested_capital	EV / invested capital
+evByRev	EV / Revenue Ratio	ev_to_sales	EV / sales (TTM)
+evCafFcf	EV / Free Cash Flow	ev_to_free_cash_flow	EV / free cash flow
+evebit	EV / EBIT Ratio	ev_to_ebit	EV / EBIT (TTM)
+evebitd	EV/EBITDA Ratio	ev_to_ebitda	EV / EBITDA (TTM)
+forInstHldng	Foreign Institutional Holding	foreign_institutional_holding	Foreign institutional holding (FPI)
+forInstHldng3M	FII Holding Change – 3M	foreign_institutional_holding_chg_1q	Foreign institutional holding, change vs 1 quarter ago
+forInstHldng6M	FII Holding Change – 6M	foreign_institutional_holding_chg_2q	Foreign institutional holding, change vs 2 quarters ago
+incDep	Depreciation & Amortization	depreciation_amortization	Depreciation and amortisation
+incDps	Dividend Per Share	dividend_per_share	Dividend per share
+incEbi	EBITDA	ebitda	EBITDA (excludes other income)
+incEpc	Employee Cost	employee_benefit_expense	Employee benefit expense
+incEps	Earnings Per Share	eps_basic	Earnings per share, basic
+incGpro	ABSENT	gross_profit	Gross profit
+incIoi	Interest & Other Items	net_non_operating_expense	Interest expense net of other income
+incNinc	Net Income	net_income	Net income (total, incl. minority share)
+incOpe	Operating & Other Expenses	other_operating_expense	Other operating expense (residual line)
+incPbi	PBIT	ebit	EBIT (excludes other income)
+incPbt	PBT	profit_before_tax	Profit before tax
+incPfc	Power & Fuel Cost	power_and_fuel_cost	Power and fuel cost
+incPyr	Payout Ratio	dividend_payout_ratio	Dividend payout ratio
+incRaw	Raw Materials	cost_of_materials	Cost of materials consumed
+incSga	Selling & Administrative Expenses	selling_general_admin_expense	Selling, general and administrative expense
+incToi	Taxes & Other Items	income_tax_expense	Income tax expense (current + deferred)
+incTrev	Total Revenue	revenue_total	Total revenue
+inddy	Sector Dividend Yield	group_dividend_yield	Group dividend yield
+indpb	Sector PB	group_pb	Group P/B
+indpe	Sector PE	group_pe	Group P/E
+indps	ABSENT	group_ps	Group P/S
+insHolding	Insurance Firms Holding	insurance_holding	Insurance company holding
+instown	Mutual Fund Holding	mutual_fund_holding	Mutual fund holding
+instown3	MF Holding Change – 3M	mutual_fund_holding_chg_1q	Mutual fund holding, change vs 1 quarter ago
+invTurnR	Inventory Turnover Ratio	inventory_turnover	Inventory turnover
+isSubject	ABSENT	is_subject	True for the subject company of the peer group
+lcpCafFcf	Price / Free Cash Flow	price_to_free_cash_flow	Market cap / free cash flow
+ldbtEqt	Long Term Debt to Equity	long_term_debt_to_equity	Long-term debt to equity
+marketCap	ABSENT	market_cap	Market capitalisation
+marketCapLabel	ABSENT	market_cap_category	SEBI/AMFI market-cap category
+maxDrawdown	1Y Max Loss	max_drawdown	Maximum drawdown
+mrktCapRank	ABSENT	market_cap_rank	Rank by market cap within the dataset universe
+mrktCapf	Market Capitalisation	market_cap	Market capitalisation
+nShareholders	Number of Shareholders	number_of_shareholders	Number of shareholders
+netIncByLbl	Net Income / Liabilities	net_income_to_total_liabilities	Net income to total liabilities
+netIncome	ABSENT	net_income	Net income (total, incl. minority share)
+opmg	5Y Avg EBITDA Margin	ebitda_margin_avg_5y	EBITDA margin, 5-year mean
+otherDiiHolding	ABSENT	other_domestic_institutional_holding	Other domestic institutions
+othersHolding	ABSENT	other_holding	Other holding (non-promoter non-public)
+pb	ABSENT	price_to_book	Price to book
+pbPremSi	PB Premium vs Sub-sector	pb_premium_to_group	P/B premium to group
+pbd	PB Premium vs Sector	pb_premium_to_group	P/B premium to group
+pbr	PB Ratio	price_to_book	Price to book
+pe	ABSENT	pe_last_fy	P/E on last fiscal-year EPS
+pePremSi	PE Premium vs Sub-sector	pe_premium_to_group	P/E premium to group
+ped	PE Premium vs Sector	pe_premium_to_group	P/E premium to group
+pef	Forward PE Ratio	pe_forward	P/E, forward
+pftMrg	Net Profit Margin	net_profit_margin	Net profit margin
+pr1d	1D Return	price_return	Price return over window
+pr1w	1W Return	price_return	Price return over window
+pr1wN	1W Return vs Nifty	relative_return	Return minus benchmark return over window
+priceBySales	Price / Sales	price_to_sales_ttm	Price to sales (TTM)
+priceCfoR	Price / CFO	price_to_operating_cash_flow	Market cap / operating cash flow
+promShrPled	Pledged Promoter Holdings	promoter_pledged	Promoter shares pledged, % of promoter holding
+ps	PS Ratio	price_to_sales_last_fy	Price to sales (last fiscal year)
+psPremSi	PS Premium vs Sub-sector	ps_premium_to_group	P/S premium to group
+psf	Forward PS Ratio	price_to_sales_forward	Price to sales (forward)
+psfs	PS Premium vs Sector	ps_premium_to_group	P/S premium to group
+qIncEbiK	EBITDA (Q)	ebitda	EBITDA (excludes other income)
+qIncEpsK	EPS (Q)	eps_basic	Earnings per share, basic
+qIncNincK	Net Income (Q)	net_income	Net income (total, incl. minority share)
+qIncOpeK	Operating & Other Expenses (Q)	total_operating_expense	Total operating expense (before D&A and finance cost)
+qIncPbiK	PBIT (Q)	ebit	EBIT (excludes other income)
+qIncPbtK	PBT (Q)	profit_before_tax	Profit before tax
+qIncTrevK	Total Revenue (Q)	revenue_total	Total revenue
+qcur	Current Ratio	current_ratio	Current ratio
+rank	ABSENT	peer_rank	Rank within the peer group (1 = highest)
+retailHolding	Retail Investor Holding	non_institutional_public_holding	Public non-institutional holding
+revenue	ABSENT	revenue_total	Total revenue
+roce	ROCE	return_on_capital_employed	Return on capital employed
+roe	Return on Equity	return_on_equity	Return on equity
+rtnAsts	Return on Assets	return_on_assets	Return on assets
+rvng	1Y Historical Revenue Growth	revenue_growth_yoy	Revenue growth, YoY
+snapshot.risk	ABSENT	relative_volatility	Volatility relative to benchmark
+strown	Promoter Holding	promoter_holding	Promoter and promoter group holding
+strown3	Promoter Holding Change – 3M	promoter_holding_chg_1q	Promoter holding, change vs 1 quarter ago
+subDy	ABSENT	group_dividend_yield	Group dividend yield
+subPb	ABSENT	group_pb	Group P/B
+subPe	ABSENT	group_pe	Group P/E
+subPs	ABSENT	group_ps	Group P/S
+summary.forecast.percBuyReco	ABSENT	analyst_buy_pct	Share of buy recommendations
+summary.forecast.totalReco	ABSENT	analyst_recommendation_count	Number of analyst recommendations
+ttmPe	TTM PE Ratio	pe_ttm	P/E, trailing twelve months
+vol1dChPct	1D Change in Volume	volume_change	Volume change vs previous period
+vol1mAvg	1M Average Volume	avg_volume	Average daily volume over window
+vol1wChPct	1W Change in Volume	volume_change	Volume change vs previous period
+vol3mAvg	3M Average Volume	avg_volume	Average daily volume over window
+wcTurnR	Working Capital Turnover Ratio	working_capital_turnover	Working capital turnover
