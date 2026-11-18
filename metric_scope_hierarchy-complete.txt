@@ -10,14 +10,14 @@ TICKERTAPE — MASTER DATA CLASSIFICATION
 |   +-- Company Size
 |       +-- Market Capitalisation (mrktCapf)
 |
-+-- 02. INCOME STATEMENT [Sankey Diagram]
++-- 02. INCOME STATEMENT
 |   |
-|   +-- A. Annual Income Statement [Multi-series Line Chart]
+|   +-- A. Annual Income Statement
 |   |   |
-|   |   +-- Revenue [Area Chart]
+|   |   +-- Revenue 
 |   |   |   +-- Total Revenue (incTrev) 
 |   |   |
-|   |   +-- Cost of Goods Sold and Operating Costs [Stacked Bar Chart]
+|   |   +-- Cost of Goods Sold and Operating Costs
 |   |   |   +-- Cost of Goods Sold (balCogs)
 |   |   |   +-- Raw Materials (incRaw)
 |   |   |   +-- Power & Fuel Cost (incPfc)
@@ -25,44 +25,44 @@ TICKERTAPE — MASTER DATA CLASSIFICATION
 |   |   |   +-- Selling & Administrative Expenses (incSga)
 |   |   |   +-- Operating & Other Expenses (incOpe)
 |   |   |
-|   |   +-- Operating Profit [Combo Chart (Bar + Line)]
+|   |   +-- Operating Profit
 |   |   |   +-- EBITDA (incEbi)
 |   |   |   +-- Depreciation & Amortization (incDep)
 |   |   |   +-- PBIT (incPbi)
 |   |   |
-|   |   +-- Non-operating Items and Tax [Waterfall Chart]
+|   |   +-- Non-operating Items and Tax
 |   |   |   +-- Interest & Other Items (incIoi)
 |   |   |   +-- PBT (incPbt)
 |   |   |   +-- Taxes & Other Items (incToi)
 |   |   |
-|   |   +-- Net Income and Per-share Metrics [Combo Chart (Bar + Line)]
+|   |   +-- Net Income and Per-share Metrics
 |   |       +-- Net Income (incNinc)
 |   |       +-- Earnings Per Share (incEps)
 |   |       +-- Dividend Per Share (incDps)
 |   |       +-- Payout Ratio (incPyr)
 |   |
-|   +-- B. Quarterly Income Statement [Multi-series Line Chart]
+|   +-- B. Quarterly Income Statement
 |       |
-|       +-- Revenue [Area Chart]
+|       +-- Revenue
 |       |   +-- Total Revenue (Q) (qIncTrevK)
 |       |
-|       +-- Operating Costs [Stacked Bar Chart]
+|       +-- Operating Costs
 |       |   +-- Operating & Other Expenses (Q) (qIncOpeK)
 |       |
-|       +-- Operating Profit [Combo Chart (Bar + Line)]
+|       +-- Operating Profit 
 |       |   +-- EBITDA (Q) (qIncEbiK)
 |       |   +-- PBIT (Q) (qIncPbiK)
 |       |
-|       +-- Profit Before Tax [Waterfall Chart]
+|       +-- Profit Before Tax 
 |       |   +-- PBT (Q) (qIncPbtK)
 |       |
-|       +-- Net Income and Per-share Metrics [Combo Chart (Bar + Line)]
+|       +-- Net Income and Per-share Metrics
 |           +-- Net Income (Q) (qIncNincK)
 |           +-- EPS (Q) (qIncEpsK)
 |
-+-- 03. BALANCE SHEET [Mirrored Stacked Bar Chart]
++-- 03. BALANCE SHEET
 |   |
-|   +-- A. Assets [Treemap]
+|   +-- A. Assets
 |   |   |
 |   |   +-- Current Assets
 |   |   |   +-- Cash and Equivalent (balCsti)
