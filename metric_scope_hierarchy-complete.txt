@@ -87,7 +87,7 @@ TICKERTAPE — MASTER DATA CLASSIFICATION
 |   |   +-- Total Assets
 |   |       +-- Total Assets (balTota)
 |   |
-|   +-- B. Liabilities [Treemap]
+|   +-- B. Liabilities
 |   |   |
 |   |   +-- Current Liabilities
 |   |   |   +-- Accounts Payable (balAccp)
@@ -109,7 +109,7 @@ TICKERTAPE — MASTER DATA CLASSIFICATION
 |   |   +-- Total Liabilities
 |   |       +-- Total Liabilities (balTotl)
 |   |
-|   +-- C. Shareholders' Equity [Treemap]
+|   +-- C. Shareholders' Equity 
 |   |   |
 |   |   +-- Share Capital
 |   |   |   +-- Share Capital (balComs)
@@ -126,7 +126,7 @@ TICKERTAPE — MASTER DATA CLASSIFICATION
 |   |   +-- Share Capitalisation
 |   |       +-- Common Shares Outstanding (balTcso)
 |   |
-|   +-- D. Equity Valuation Base [ Multi-series Line Chart]
+|   +-- D. Equity Valuation Base 
 |       +-- Book Value (bookValue)
 |
 +-- 04. CASH FLOW STATEMENT
